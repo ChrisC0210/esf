@@ -1,0 +1,19 @@
+//plugin
+@import "../scss/plugin/boostrap";
+//HKS Style
+@import "../scss/hksStyle/hksColor";
+@import "../scss/hksStyle/hksFonts";
+@import "../scss/hksStyle/hksBanner";
+@import "../scss/hksStyle/hksBtn";
+@import "../scss/hksStyle/hksCard";
+@import "../scss/hksStyle/hksImg";
+//element
+@import "../scss/elment/parallax";
+.breadcrumb{
+  background-color: $white;
+  //background-color: red;
+  padding: .75rem 0rem;
+  a{
+    color: $hks-blue;
+  }
+}

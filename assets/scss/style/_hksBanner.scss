@@ -1,0 +1,49 @@
+.banner-box{
+  background-color: #E4F2F3;
+  height: 200px;
+  .banner-text{
+    padding-top: 68px;
+  }
+}
+.qa-box{
+  background-color: #F4F4F4;
+  height: 100%;
+}
+.header-bg{
+  background-color: $white;
+  box-shadow: 0 0 0.5em rgb(138, 138, 138);
+}
+.video-box{
+  width: 100%;
+  background-color: #a5a5a5;
+}
+.footer-box{
+  flex-direction: column;
+  a{
+    color: inherit;
+  }
+}
+.banner-homepage{
+  height: 100vh;
+  background-color: #f2f2f2ee;
+  //opacity: 0.5;
+  background-image: url("http://www.vela.hk/law/html/HKS-consulting/assets/img/banner1.png");
+  background-size: cover;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a{
+    color: inherit;
+    text-decoration: none;
+  } 
+}
+.banner-homepage-content{
+  position: relative;
+  text-shadow: 0.1em 0.1em 0.2em $white;
+}
+.services-box{
+  border: solid 1px $hks-blue;
+  border-radius:10px; 
+  padding: 20px;
+}
