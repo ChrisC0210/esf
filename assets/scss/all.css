@@ -14946,13 +14946,4 @@ a.text-dark:focus, a.text-dark:hover {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
-
-.breadcrumb {
-  background-color: #fefefe;
-  padding: .75rem 0rem;
-}
-
-.breadcrumb a {
-  color: #4B8ED1;
-}
 /*# sourceMappingURL=all.css.map */
