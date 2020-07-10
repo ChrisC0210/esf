@@ -1,12 +1,12 @@
 //plugin
 @import "../scss/plugin/boostrap";
-//HKS Style
-@import "../scss/hksStyle/hksColor";
-@import "../scss/hksStyle/hksFonts";
-@import "../scss/hksStyle/hksBanner";
-@import "../scss/hksStyle/hksBtn";
-@import "../scss/hksStyle/hksCard";
-@import "../scss/hksStyle/hksImg";
+//style
+@import "../scss/style/color";
+@import "../scss/style/fonts";
+@import "../scss/style/banner";
+@import "../scss/style/btn";
+@import "../scss/style/card";
+@import "../scss/style/img";
 //element
 @import "../scss/elment/parallax";
 .breadcrumb{

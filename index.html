@@ -1,428 +1,806 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>ESF-FDD</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- CSRF Token -->
-    <meta name="csrf-token" content="icYgNWFmJIO5sGRDymWBceweqorlgVPkQKAYitix">
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="icYgNWFmJIO5sGRDymWBceweqorlgVPkQKAYitix">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link id="bsdp-css" href="http://esf-ffd.vela.hk/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css" rel="stylesheet">
-  
-    <!-- Select2 -->
+  <link id="bsdp-css"
+    href="http://esf-ffd.vela.hk/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css"
+    rel="stylesheet">
+
+  <!-- Select2 -->
   <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/select2/css/select2.min.css">
   <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-  
-  
+
+
   <!-- summernote -->
   <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/summernote/summernote-bs4.css">
-  
+
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="http://esf-ffd.vela.hk/dist/css/adminlte.min.css">
-  
+
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+
 <body class="hold-transition sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
-<!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-          </ul>
+  <!-- Site wrapper -->
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
 
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
+      <!-- SEARCH FORM -->
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-sm">
+          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-              <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
           </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-              <li class="nav-item">
-        <a class="nav-link" href="http://esf-ffd.vela.hk/logout" role="button" onclick="event.preventDefault();
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">15 Notifications</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 new messages
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 friend requests
+              <span class="float-right text-muted text-sm">12 hours</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 new reports
+              <span class="float-right text-muted text-sm">2 days</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://esf-ffd.vela.hk/logout" role="button" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                       
-          <i class="fas fa-power-off"></i>
-        </a>
-           <form id="logout-form" action="http://esf-ffd.vela.hk/logout" method="POST" style="display: none;">
-                                        <input type="hidden" name="_token" value="icYgNWFmJIO5sGRDymWBceweqorlgVPkQKAYitix">
-                                    </form>
-      </li>
-            <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-<!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="/" class="brand-link">
-      <img src="http://esf-ffd.vela.hk/dist/img/logo.png"
-           alt="Logo"
-           class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">ESF</span>
-    </a>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-              <!-- Sidebar user (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="http://esf-ffd.vela.hk/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <i class="fas fa-power-off"></i>
+          </a>
+          <form id="logout-form" action="http://esf-ffd.vela.hk/logout" method="POST" style="display: none;">
+            <input type="hidden" name="_token" value="icYgNWFmJIO5sGRDymWBceweqorlgVPkQKAYitix">
+          </form>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="/" class="brand-link">
+        <img src="http://esf-ffd.vela.hk/dist/img/logo.png" alt="Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span class="brand-text font-weight-light">ESF</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="http://esf-ffd.vela.hk/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
+              alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">tat</a>
+          </div>
         </div>
-        <div class="info">
-          <a href="#" class="d-block">tat</a>
-        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="../../index.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard v1</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../../index2.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard v2</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../../index3.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard v3</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-file-alt"></i>
+                <p>
+                  RFQ
+                  <i class="fas fa-angle-left right"></i>
+                  <span class="badge badge-info right">6</span>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="http://esf-ffd.vela.hk/rfq/create" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Create RFQ</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://esf-ffd.vela.hk/rfq/listing" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Listing</p>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-file-alt"></i>
+                <p>
+                  Work Order
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="http://esf-ffd.vela.hk/workorder/create" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Create</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../charts/flot.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Listing</p>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-file-invoice-dollar"></i>
+                <p>
+                  Budgeting
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="../charts/chartjs.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Create</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../charts/flot.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Report</p>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="nav-header">Setting</li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                  System User
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="../UI/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Listing</p>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-database"></i>
+                <p>
+                  Master
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="http://esf-ffd.vela.hk/master/contractor/listing" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Contractor</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://esf-ffd.vela.hk/master/budget_classification/listing" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Budget Classification</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../UI/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Cost Center</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../UI/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>School/Residential/Kindergarten</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../UI/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>FMRI, Health Safety, Logistics only</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../UI/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Work Category (for FM)</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../UI/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Work Item (for FM)</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../UI/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Special Event</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
       </div>
-      
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../../index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../../index2.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../../index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-file-alt"></i>
-              <p>
-                RFQ
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="http://esf-ffd.vela.hk/rfq/create" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Create RFQ</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="http://esf-ffd.vela.hk/rfq/listing" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Listing</p>
-                </a>
-              </li>
-              
-            </ul>
-          </li>
-          
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-file-alt"></i>
-              <p>
-                Work Order
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="http://esf-ffd.vela.hk/workorder/create" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Create</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Listing</p>
-                </a>
-              </li>
-              
-            </ul>
-          </li>
-         
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-file-invoice-dollar"></i>
-              <p>
-                Budgeting
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Create</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Report</p>
-                </a>
-              </li>
-              
-            </ul>
-          </li>
-          <li class="nav-header">Setting</li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
-              <p>
-                System User
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Listing</p>
-                </a>
-              </li>
-              
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-database"></i>
-              <p>
-                Master
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="http://esf-ffd.vela.hk/master/contractor/listing" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Contractor</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="http://esf-ffd.vela.hk/master/budget_classification/listing" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Budget Classification</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Cost Center</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>School/Residential/Kindergarten</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>FMRI, Health Safety, Logistics only</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Work Category (for FM)</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Work Item (for FM)</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Special Event</p>
-                </a>
-              </li>
-             </ul>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-  
-<!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Blank Page</h1>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>RFQ</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="http://esf-ffd.vela.hk/home">Home</a></li>
+                <li class="breadcrumb-item ">RFQ</li>
+                <li class="breadcrumb-item active"><a
+                    href="http://esf-ffd.vela.hk/master/contractor/listing">Listing</a></li>
+                <li class="breadcrumb-item active">Confirm</li>
+              </ol>
+            </div>
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Blank Page</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
+        </div><!-- /.container-fluid -->
+      </section>
 
-    <!-- Main content -->
-    <section class="content">
+      <!-- Main content -->
+      <section class="content">
 
-      <!-- Default box -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Title</h3>
+        <!-- form start -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Confirm Info</h3>
 
-          <div class="card-tools">
+            <!-- <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
               <i class="fas fa-minus"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
               <i class="fas fa-times"></i></button>
+          </div> -->
           </div>
-        </div>
-        <div class="card-body">
-          
-                    You are logged in!
-        </div>
-        <!-- /.card-body -->
-        <div class="card-footer">
-          Footer
-        </div>
-        <!-- /.card-footer-->
-      </div>
-      <!-- /.card -->
+          <div class="card-body">
+            <!-- RFQ info -->
+            <div class="row">
+              <div class="col-sm-12">
+                <!-- text input -->
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">RFQ #</label>
+                  <div class="col-sm-4">
+                    <div>0001</div>
+                    <!-- <input type="text" class="form-control" id="" placeholder="RFQ #" value="0001" disabled=""> -->
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">School</label>
+                  <div class="col-sm-6">
+                    <div>West Island School</div>
+                    <div>ESF Tsing Yi International Kindergarten</div>
+                    <div>IS,PS,ESFC</div>
+                    <!-- <select class="select2 select2-hidden-accessible" name="select_school_unit[]" multiple=""
+                      data-placeholder="School" data-dropdown-css-class="select2-purple" style="width: 100%;"
+                      data-select2-id="1" tabindex="-1" aria-hidden="true">
+                      <option value="1">Discovery College</option>
+                      <option value="2" selected="selected" data-select2-id="3">West Island School</option>
+                      <option value="3">Kennedy School</option>
+                      <option value="4">Renaissance College</option>
+                      <option value="5">Beacon Hill School</option>
+                      <option value="6">Kowloon Junior School</option>
+                      <option value="7">Island School</option>
+                      <option value="8">Bradbury School</option>
+                      <option value="9">Peak School</option>
+                      <option value="10">King George V School</option>
+                      <option value="11">Clearwater Bay School</option>
+                      <option value="12">Quarry Bay School</option>
+                      <option value="13">Sha Tin College</option>
+                      <option value="14">Glenealy School</option>
+                      <option value="15">Sha Tin Junior School</option>
+                      <option value="16">South Island School</option>
+                      <option value="17">Jockey Club Sarah Roe School</option>
+                      <option value="18">ESF Abacus International Kindergarten</option>
+                      <option value="19">ESF Hillside International Kindergarten</option>
+                      <option value="20" selected="selected" data-select2-id="4">ESF Tsing Yi International Kindergarten
+                      </option>
+                      <option value="21">ESF Wu Kai Sha International Kindergarten</option>
+                      <option value="22">ESF Tung Chung International Kindergarten</option>
+                      <option value="23">PS,KS,IS</option>
+                      <option value="24">PS,KS,WIS,IS,SIS</option>
+                      <option value="25">WIS,SIS,KS</option>
+                      <option value="26">BS,WIS,KS,KS,IS</option>
+                      <option value="27">BS,PS,WIS,IS</option>
+                      <option value="28">IS , PS</option>
+                      <option value="29">IS, KGV, SC, SIS, WIS</option>
+                      <option value="30">WIS,IS,SIS,KS,PS</option>
+                      <option value="31">KS,PS</option>
+                      <option value="32">SC,SJS,KJS</option>
+                      <option value="33">Beacon Hill School, South Island School</option>
+                      <option value="34">JCSRS,SIS,SC,WIS</option>
+                      <option value="35">KS,PS,WIS</option>
+                      <option value="36">GS,WIS</option>
+                      <option value="37">KS, GS</option>
+                      <option value="38">QBS,BS,SJS,SC,CWBS</option>
+                      <option value="39">KGV,KJS,JCSRS,BHS</option>
+                      <option value="40">GS,IS,KS,PS,WIS,SIS</option>
+                      <option value="41">IS, BS, QBS, SIS</option>
+                      <option value="42">QBS,BS,SJS,SC,CWBS</option>
+                      <option value="43">BHS,KGV,JCSRS,KJS</option>
+                      <option value="44">SIS , BHS</option>
+                      <option value="45">KGV,SIS</option>
+                      <option value="46">BS, QBS, HS</option>
+                      <option value="47">IS-PH,IS-SC,SC,WIS</option>
+                      <option value="48">IS, SIS, WIS, BS, GS, HS, KS, PS, QBS</option>
+                      <option value="49">BHS, CWBS, KJS</option>
+                      <option value="50">IS, KS, PS, SIS, WIS</option>
+                      <option value="51">KGV, SC, SIS, RC, DC</option>
+                      <option value="52">Island School, Bradbury School</option>
+                      <option value="53">IS, SIS</option>
+                      <option value="54">KS,SIS,WIS,IS</option>
+                      <option value="55">PS,IS,BS</option>
+                      <option value="56">KS/QBS/HS/WIS/BS/IS</option>
+                      <option value="57">SIS,WIS,IS,PS</option>
+                      <option value="58">IS, PS, SIS, WIS</option>
+                      <option value="59">KS, PS, SIS, WIS</option>
+                      <option value="60">GS, IS, KS, PS</option>
+                      <option value="61">GS, IS, KS, PS, SIS, WIS</option>
+                      <option value="62">KS, WIS</option>
+                      <option value="63"></option>
+                      <option value="64">PS,SIS,WS</option>
+                      <option value="65">IS,SIS,WIS</option>
+                      <option value="66">KS,IS,WIS</option>
+                      <option value="67">SIS, WIS</option>
+                      <option value="68">BS,IS,KS,QBS,SIS</option>
+                      <option value="69">KGV, SC, WIS</option>
+                      <option value="70">KJS,BHS</option>
+                      <option value="71">GS,PS,IS,SIS,WIS</option>
+                      <option value="72">KGV, JCSRC</option>
+                      <option value="73">CWBS,SIS</option>
+                      <option value="74">GS,KS,PS,WIS</option>
+                      <option value="75">QBS,IS</option>
+                      <option value="76">BHS, CWBS, JCSRC, JCSRS, KGV, KJS, SC, SJS</option>
+                      <option value="77">IS/KGV/SC/SIS/WIS</option>
+                      <option value="78">Island School-Sun Chui Site</option>
+                      <option value="79">Island School-Sun Chui Site,Pok Hong Site</option>
+                      <option value="80">IS, KGV, SC, SIS, WIS, JCSRS</option>
+                      <option value="81">WIS,SIS,QBS,BS</option>
+                      <option value="82">QBS,WIS,BS,IS</option>
+                      <option value="83">QBS,SIS,BS,KS</option>
+                      <option value="84">IS,SIS,BS</option>
+                      <option value="85">BS,WIS,SIS,KS,PS</option>
+                      <option value="86">Bradbury School, South Island School</option>
+                      <option value="87">WIS,JCSRS</option>
+                      <option value="88">KS,IS,SIS,BS</option>
+                      <option value="89">KGV,JCSRS</option>
+                      <option value="90">SIS,KS,BS,QBS</option>
+                      <option value="91">KGV,JCSRS,KJS</option>
+                      <option value="92">KJS,SJS,SC,KGV,JCSRS</option>
+                      <option value="93">KGV,SC,JCSRS</option>
+                      <option value="94">KGV,SJS</option>
+                      <option value="95">SC,KGV,SJS,BHS,KJS,SRS,CWBS,JCSRC</option>
+                      <option value="96">KGV, SC, SJS, BHS, CWBS, KJS, JCSRS, JCSRC</option>
+                      <option value="97">SIS, KS, QBS, IS, PS, BS</option>
+                      <option value="98">KGV, HS</option>
+                      <option value="99">Kennedy School, Island School, South Island School</option>
+                      <option value="100">WIS, SIS, QBS</option>
+                      <option value="101">IS, SIS, BS</option>
+                      <option value="102">KS, WIS, QBS</option>
+                      <option value="103">SC, SJS, KGV, KJS</option>
+                      <option value="104">SIS,KGV,IS,BHS,WIS,HS,SC,SJS,KS,CBS,GS,BS,QBJS,KJS</option>
+                      <option value="105">Quarry Bay School, Glenealy School</option>
+                      <option value="106">KS,BS,PS,SIS,IS,WIS</option>
+                      <option value="107">KGV,IS,SC,SIS,WIS</option>
+                      <option value="108">CWBS,SIS,JCSRS</option>
+                      <option value="109">JCSRS, WIS, SC</option>
+                      <option value="110">SIS,WIS,KS,QBS</option>
+                      <option value="111">SC,SJS,BHS,CWBS</option>
+                      <option value="112">IS,BS,PS,GS</option>
+                      <option value="113" selected="selected" data-select2-id="5">IS,PS,ESFC</option>
+                      <option value="114">Bradbury</option>
+                      <option value="115">Bradbury School,Peak School,South Island School</option>
+                      <option value="116">QBS,SIS,BS,IS,KS,WIS</option>
+                      <option value="117">BS,SIS,IS,WIS</option>
+                      <option value="118">SIS,WIS,QBS,IS</option>
+                      <option value="119">IS,ESFC,QBS,SIS,HS</option>
+                      <option value="120">BS,SIS,KS,IS,WIS</option>
+                      <option value="121">SIS, QBS, BS, PS</option>
+                      <option value="122">Schools of Kln and NT</option>
+                      <option value="123">BHS, CWBS, QBS</option>
+                      <option value="124">KS, GS, PS</option>
+                      <option value="125">Sha Tin College &amp; Sha Tin Junior School</option>
+                      <option value="126">ESFC-RCHK</option>
+                      <option value="127">King George V School</option>
+                      <option value="128">South Island School</option>
+                      <option value="129">Island School</option>
+                      <option value="130">West Island School</option>
+                      <option value="131">Bradbury School</option>
+                      <option value="132">Glenealy School</option>
+                      <option value="133">Peak School</option>
+                      <option value="134">Kennedy School</option>
+                      <option value="135">Quarry Bay School</option>
+                      <option value="136">ESF Centre</option>
+                      <option value="137">Jockey Club Sarah Roe School</option>
+                      <option value="138">Jockey Club Sarah Roe Centre</option>
+                      <option value="139">Sha Tin College</option>
+                      <option value="140">Beacon Hill School</option>
+                      <option value="141">Clearwater Bay School</option>
+                      <option value="142">Sha Tin Junior School</option>
+                      <option value="143">Education Development Centre, WIS</option>
+                      <option value="144">All Schools</option>
+                      <option value="145">ESF International Kindergarten (Hillside)</option>
+                      <option value="146">IS, WIS, KS, GS</option>
+                      <option value="147">Discovery College</option>
+                      <option value="148">Kowloon Junior School</option>
+                      <option value="149">VOID</option>
+                      <option value="150">BS, KS, QBS, WIS, SIS</option>
+                      <option value="151">PS, SIS, QBS, KS, BS, WIS</option>
+                      <option value="152">IS, WIS, SIS, KGV, SC, JCSRS</option>
+                      <option value="153">PS,SIS,BS,KS</option>
+                      <option value="154">Bradbury School, King George V</option>
+                      <option value="155">BHS,CWBS,KJS,SC,SJS</option>
+                      <option value="156">BS, QBS, SIS</option>
+                      <option value="157">PS, WIS</option>
+                      <option value="158">KJS, KGV, JCSRC</option>
+                      <option value="159">QBS, PS, SC</option>
+                      <option value="160">WIS,IS,SIS,KS</option>
+                      <option value="161">BS,IS,QBS</option>
+                      <option value="162">KGV, JCSRS, SC, SJS</option>
+                      <option value="163">KS,SIS</option>
+                      <option value="164">SIS,HS</option>
+                      <option value="165">IS/WIS/BS/KS</option>
+                      <option value="166">BS, PS, SIS, WIS, HILLSIDE</option>
+                      <option value="167">QBS,PS,SIS</option>
+                      <option value="168">SIS, WIS, BS, GS, HS, KS, PS, QBS</option>
+                      <option value="169">BS,GS,PS</option>
+                      <option value="170">CWBS,BHS,SIS,QBS,HS</option>
+                      <option value="171">SC,SJS,WIS,KS,GS.PS</option>
+                      <option value="172">BHS,CWBS</option>
+                      <option value="173">SIS,QBS,HS</option>
+                      <option value="174">SC,SJS</option>
+                      <option value="175">WIS,KS,GS/PS</option>
+                      <option value="176">JCSRS, KJS</option>
+                      <option value="177">SC, SJS, BHS, KJS</option>
+                      <option value="178">GS,PS</option>
+                      <option value="179">SIS,QBS</option>
+                      <option value="180">GS, KS, PS, SIS, WIS</option>
+                      <option value="181">BS,HS,GS,PS,JCSRC,JCSRS,KGV,KJS,TYK,TCK</option>
+                      <option value="182">QBS,KS,WIS,SIS,BHS,SC,SJS,CWBS,IS-PH,IS-SC</option>
+                      <option value="183">SIS,HS,BS,QBS,WIS,KS,GS,PS,KGV,JCSRC,JCSRS,ESFC</option>
+                      <option value="184">SIS,BS,HS,QBS,CWBS</option>
+                      <option value="185">IS-PH,IS-SC,SC,SJS</option>
+                      <option value="186">KJS,BHS,SJS,SC,IS-PH,IS-SC,CWBS</option>
+                      <option value="187">Island School-Pok Hong Site</option>
+                      <option value="188">All ESF Schools + ESFC</option>
+                      <option value="189">KGV,WIS,SIS,SC,IS-PH,IS-SC</option>
+                      <option value="190">PS, SIS</option>
+                      <option value="191">BHS, BS, KS, WIS</option>
+                      <option value="192">CWBS, SC, SJS</option>
+                      <option value="193">GS,KS,WIS</option>
+                      <option value="194">KJS, KGV, JCSRS</option>
+                      <option value="195">BS, BHS, CWBS</option>
+                      <option value="196">KGV,KJS,JCSRS,JCSRC,IS-PH,IS-SC,SC,SJS</option>
+                      <option value="197">GS,PS,QBS,KS</option>
+                      <option value="198">KS,QBS,PS</option>
+                      <option value="199">IS, KGV, SIS, WIS</option>
+                      <option value="200">BS/CWBS/GS/PS</option>
+                      <option value="201">BS, CWBS, GS, KGV, WIS</option>
+                      <option value="202">IS, SC, SIS, WIS, BHS, BS, GS, KS, KJS, PS, QBS</option>
+                    </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                      data-select2-id="2" style="width: 100%;"><span class="selection"><span
+                          class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true"
+                          aria-expanded="false" tabindex="-1" aria-disabled="false">
+                          <ul class="select2-selection__rendered">
+                            <li class="select2-selection__choice" title="West Island School" data-select2-id="6"><span
+                                class="select2-selection__choice__remove" role="presentation">×</span>West Island School
+                            </li>
+                            <li class="select2-selection__choice" title="ESF Tsing Yi International Kindergarten"
+                              data-select2-id="7"><span class="select2-selection__choice__remove"
+                                role="presentation">×</span>ESF Tsing Yi International Kindergarten</li>
+                            <li class="select2-selection__choice" title="IS,PS,ESFC" data-select2-id="8"><span
+                                class="select2-selection__choice__remove" role="presentation">×</span>IS,PS,ESFC</li>
+                            <li class="select2-search select2-search--inline"><input class="select2-search__field"
+                                type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none"
+                                spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder=""
+                                style="width: 0.75em;"></li>
+                          </ul>
+                        </span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span> -->
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Work Description</label>
+                  <div class="col-sm-6">
+                    <div>Text your Work Description here</div>
+                    <!-- <textarea class="form-control" id="work_description" name="work_description" rows="3"
+                      placeholder="Enter ...">abc</textarea> -->
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Entry Date</label>
+                  <div class="col-sm-4">
+                    <div>2020-06-30</div>
+                    <!-- <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="far fa-calendar-alt"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control float-right datepicker" placeholder="yyyy-mm-dd"
+                        name="entry_date" id="entry_date" data-date-format="yyyy-mm-dd" value="2020-06-30">
 
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+                    </div> -->
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label">Application Deadline</label>
+                  <div class="col-sm-4">
+                    <div>2020-07-16</div>
+                    <!-- <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">
+                          <i class="far fa-calendar-alt"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control float-right datepicker" placeholder="yyyy-mm-dd"
+                        name="application_deadline" id="application_deadline" data-date-format="yyyy-mm-dd"
+                        value="2020-07-16">
 
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.3
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- RFQ info -->
+            <!-- CheckStatus -->
+            <form action="" class="needs-validation" novalidate>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="checkStatus1"
+                      value="Yes">
+                    <label class="form-check-label" for="checkStatus1">
+                      I want to submit the tender
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="checkStatus2"
+                      value="Decline">
+                    <label class="form-check-label" for="checkStatus2">
+                      I don’t have the interest on this project
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-12 mb-4 mt-4">
+                  <div class="Box" style="display:none">
+                    <div class="form-group">
+                      <label for="inputEmail">Email</label>
+                      <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
+                      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPhone">Phone</label>
+                      <input type="password" class="form-control" id="inputPhone" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputName">Name</label>
+                      <input type="text" class="form-control" id="inputName" required>
+                      <div class="invalid-tooltip">
+                        Please provide a valid city.
+                      </div>
+                    </div>
+                    <div class="form-group is-invalid">
+                      <div >File</div>
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="file-upload">
+                        <label class="custom-file-label" for="file-upload" data-browse="Upload">Choose
+                          file</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <button type="submit" class="btn btn-primary" id="RFQconfirm" value="RFQconfirm">Submit</button>
+                </div>
+              </div>
+            </form>
+
+            <!-- CheckStatus -->
+          </div>
+          <!-- /.card-body -->
+          <div class="card-footer">
+            <!-- <div class="row">
+              <div class="col-sm-6">
+                <button type="submit" class="btn btn-primary" id="RFQconfirm" value="RFQconfirm">Submit</button>
+              </div>
+            </div> -->
+          </div>
+          <!-- /.card-footer-->
+        </div>
+        <!-- form end -->
+
+      </section>
+      <!-- /.content -->
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-    reserved.
-  </footer>
+    <!-- /.content-wrapper -->
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
+    <footer class="main-footer">
+      <div class="float-right d-none d-sm-block">
+        <b>Version</b> 3.0.3
+      </div>
+      <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+      reserved.
+    </footer>
 
-<!-- jQuery -->
-<script src="http://esf-ffd.vela.hk/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="http://esf-ffd.vela.hk/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- Select2 -->
-<script src="../../plugins/select2/js/select2.full.min.js"></script>
-<!-- DataTables -->
-<script src="http://esf-ffd.vela.hk/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="http://esf-ffd.vela.hk/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="http://esf-ffd.vela.hk/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="http://esf-ffd.vela.hk/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
 
-<script src="http://esf-ffd.vela.hk/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-<script src="http://esf-ffd.vela.hk/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.min.js" charset="UTF-8"></script>
+  <!-- jQuery -->
+  <script src="http://esf-ffd.vela.hk/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="http://esf-ffd.vela.hk/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Select2 -->
+  <script src="../../plugins/select2/js/select2.full.min.js"></script>
+  <!-- DataTables -->
+  <script src="http://esf-ffd.vela.hk/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="http://esf-ffd.vela.hk/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="http://esf-ffd.vela.hk/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="http://esf-ffd.vela.hk/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 
-<!-- for Work Order -->
-<link rel="stylesheet" href="http://esf-ffd.vela.hk/css/bootstrap-multiselect.css">
-<script type="text/javascript" src="http://esf-ffd.vela.hk/js/bootstrap-multiselect.js"></script>
+  <script src="http://esf-ffd.vela.hk/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <script src="http://esf-ffd.vela.hk/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.min.js"
+    charset="UTF-8"></script>
 
-<link rel="stylesheet" href="http://esf-ffd.vela.hk/css/workorder.css">
-<script type="text/javascript" src="http://esf-ffd.vela.hk/js/workorder.js"></script>
+  <!-- for Work Order -->
+  <link rel="stylesheet" href="http://esf-ffd.vela.hk/css/bootstrap-multiselect.css">
+  <script type="text/javascript" src="http://esf-ffd.vela.hk/js/bootstrap-multiselect.js"></script>
 
-<!-- AdminLTE App -->
-<script src="http://esf-ffd.vela.hk/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="http://esf-ffd.vela.hk/dist/js/demo.js"></script>
-<script src="http://esf-ffd.vela.hk/plugins/summernote/summernote-bs4.min.js"></script>
-<script>
-    
-      $('.datepicker*').datepicker({
-    format: 'yyyy-mm-dd',
-    language: "zh-TW"
-});
-$('.select2*').select2();
-    
-    
-</script>
+  <link rel="stylesheet" href="http://esf-ffd.vela.hk/css/workorder.css">
+  <script type="text/javascript" src="http://esf-ffd.vela.hk/js/workorder.js"></script>
+
+  <!-- AdminLTE App -->
+  <script src="http://esf-ffd.vela.hk/dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="http://esf-ffd.vela.hk/dist/js/demo.js"></script>
+  <script src="http://esf-ffd.vela.hk/plugins/summernote/summernote-bs4.min.js"></script>
+  <script>
+    $('.datepicker*').datepicker({
+      format: 'yyyy-mm-dd',
+      language: "zh-TW"
+    });
+    $('.select2*').select2();
+  </script>
+  <script>
+    window.onload = function () {
+      var RFQconfirm = document.getElementById("RFQconfirm");
+      RFQconfirm.onclick = function () {
+        if (confirm("Are you sure you want to send this form?")) {
+          alert("Thanks for your submit!");
+        } else {
+          //alert(" ");
+        }
+      }
+    }
+    $('input[type="radio"]').click(function () {
+      if ($(this).attr("value") == "Decline") {
+        $(".Box").hide('slow');
+      }
+      if ($(this).attr("value") == "Yes") {
+        $(".Box").show('slow');
+
+      }
+    });
+    $('input[type="radio"]').trigger('click');
+    $('#file-upload').change(function () {
+      var i = $(this).prev('label').clone();
+      var file = $('#file-upload')[0].files[0].name;
+      $(this).prev('label').text(file);
+    });
+  </script>
 </body>
+
 </html>
