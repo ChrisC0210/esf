@@ -16,3 +16,15 @@
   } 
   }
 }
+//esf btn
+.esfBtn{
+  color: $white;
+  background-color: #7d002f;
+  border-color: #7d002f;
+  padding: 8px 50px 8px 50px;
+  &:hover, &:active, &:focus{
+    background-color: #300010;
+    border-color: #300010;
+    color: $white;
+  } 
+}
