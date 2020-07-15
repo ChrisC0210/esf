@@ -29,6 +29,9 @@ $ap-purple-200: #e7c8de !default;
 $ap-purple-600: #DBA7CC !default;
 $ap-yellow-200: #FFF291 !default;
 $ap-yellow-600: #fee100 !default;
+//@esf color
+$esf-red: #7d002f !default;
+$esf-red-600: #300010 !default;
 
 //color
 .white {color:$white !important;} 
@@ -59,6 +62,10 @@ $ap-yellow-600: #fee100 !default;
 .ap-yellow-600  {color:$ap-yellow-600;}
 
 .ap-brown-100-bg {background-color: $ap-brown-100;}
+//@esf color
+.esf-red  {color:$esf-red;}
+.esf-red-600  {color:$esf-red-600;}
+
 
 //https://www.cssmatic.com/box-shadow
 .nb-box-shadow{
