@@ -28,3 +28,14 @@
     color: $white;
   } 
 }
+.esfBtn-sec{
+  color: $white;
+  background-color: $gray-600;
+  border-color: $gray-600;
+  padding: 8px 50px 8px 50px;
+  &:hover, &:active, &:focus{
+    background-color: $gray-700;
+    border-color: $gray-700;
+    color: $white;
+  } 
+}

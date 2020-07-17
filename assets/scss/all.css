@@ -10820,6 +10820,10 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 20px;
 }
 
+.container-box {
+  height: 80vh;
+}
+
 .btn-primary {
   background-color: #4B8ED1;
   border-color: #4B8ED1;
@@ -10852,6 +10856,19 @@ a.text-dark:focus, a.text-dark:hover {
 .esfBtn:hover, .esfBtn:active, .esfBtn:focus {
   background-color: #300010;
   border-color: #300010;
+  color: #fefefe;
+}
+
+.esfBtn-sec {
+  color: #fefefe;
+  background-color: #848383;
+  border-color: #848383;
+  padding: 8px 50px 8px 50px;
+}
+
+.esfBtn-sec:hover, .esfBtn-sec:active, .esfBtn-sec:focus {
+  background-color: #767676;
+  border-color: #767676;
   color: #fefefe;
 }
 

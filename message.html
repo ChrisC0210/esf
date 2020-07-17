@@ -35,21 +35,66 @@
     </nav>
   </div>
   <!-- header -->
+  <div  class="container-box">
+    <!-- form start -->
+    <div class="container col-12 col-sm-12 col-lg-12 mt-4 mb-4">
+      <div class="text-r-6-5-6 text-center esf-red">System Message 1</div>
+      <div class="mb-4 text-r-1-3-1 text-center gray-800">
+        If you have any questions, you can contact us by email:
+        <a class="gray-800" href="mailto:info@esfcentre.edu.hk">info@esfcentre.edu.hk</a>
+      </div>
+      <!-- Button trigger modal -->
+      <div class="row justify-content-center">
+        <div class="col-sm-6 text-center">
+          <button type="button" class="btn esfBtn text-r-1-3-1" data-toggle="modal"
+            data-target="#systemMessage">Button</button>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="systemMessage" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        role="dialog" aria-labelledby="systemMessageLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-r-2-4-2" id="systemMessageLabel">System Message</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-r-1-3-1">
+              Message Message
+            </div>
+            <div class="modal-footer text-r-1-3-1">
+              <button type="button" class="btn esfBtn-sec text-r-1-3-1" data-dismiss="modal">Close</button>
+              <button type="button" class="btn esfBtn text-r-1-3-1" data-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
 
-  <!-- form start -->
-  <div class="container col-12 col-sm-12 col-lg-12 mt-4 mb-4">
-    <div class="text-r-6-5-6 text-center esf-red">Thank You</div>
-    <div class="mb-4 text-r-1-3-1 text-center gray-800">
-      If you have any questions, you can contact us by email: 
-      <a class="gray-800" href="mailto:info@esfcentre.edu.hk">info@esfcentre.edu.hk</a>
     </div>
+    <!-- form end -->
+    <!-- form start -->
+    <div class="container col-12 col-sm-12 col-lg-10 mt-4 mb-4">
+      <div class="text-r-6-5-6 text-center esf-red">System Message 2</div>
+      <!-- Modal -->
+      <div class="mb-4 text-r-1-3-1 text-center gray-800">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, obcaecati deleniti? Suscipit, hic beatae! At
+        ab
+        mollitia repellat voluptates repellendus, officiis delectus itaque, facere voluptatibus expedita magnam odit.
+        Distinctio, corporis?
+      </div>
+      <div class="text-center text-r-1-3-1">
+        <button type="button" class="btn esfBtn-sec text-r-1-3-1">NO</button>
+        <button type="button" class="btn esfBtn text-r-1-3-1">OK</button>
+      </div>
+    </div>
+    <!-- Modal -->
 
-    <div class="thx-img">
-      <img src="./assets/img/thanlkU.jpg" alt="">
-    </div>
   </div>
   <!-- form end -->
-
+  </div>
   <!-- footer -->
   <footer class="text-r-1-3-1">
     <div class="footer-wrapper">
@@ -97,6 +142,11 @@
   </script>
   <script type="text/javascript" src="./dist/js/popper.min.js"></script>
   <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+  <script>
+    $('#myModal').on('hidden.bs.modal', function () {
+      $("#myModal").attr('aria-hidden', true);
+    });
+  </script>
 </body>
 
 </html>
