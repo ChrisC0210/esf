@@ -15054,4 +15054,51 @@ a.text-dark:focus, a.text-dark:hover {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+
+[class*=sidebar-dark-] {
+  background-color: #7d002f !important;
+}
+
+.sidebar-dark-primary {
+  background-color: #7d002f !important;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #7d002f !important;
+  border-color: #7d002f !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-danger:hover, .btn-danger:active, .btn-danger:focus {
+  background-color: #300010 !important;
+  border-color: #300010 !important;
+  color: #fefefe !important;
+}
+
+.btn-app {
+  border-radius: 3px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #6c757d;
+  font-size: 12px;
+  height: 60px;
+  margin: 0 0 10px 10px;
+  min-width: 80px;
+  padding: 15px 5px;
+  position: relative;
+  text-align: center;
+}
+
+.btn-app:hover {
+  background: #f8f9fa;
+  border-color: #858585;
+  color: #303030;
+}
+
+.btn-app:active, .btn-app:focus {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
 /*# sourceMappingURL=all.css.map */
