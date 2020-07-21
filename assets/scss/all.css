@@ -15092,9 +15092,9 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .btn-app:hover {
-  background: #f8f9fa;
-  border-color: #858585;
-  color: #303030;
+  background: #f8f9fa !important;
+  border-color: #858585 !important;
+  color: #303030 !important;
 }
 
 .btn-app:active, .btn-app:focus {
