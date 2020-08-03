@@ -6,3 +6,7 @@
 >>navbar.blade.php:/client/esf-ffd/resources/views/layouts<br>
 >>all.min.css:/client/esf-ffd/public/plugins/fontawesome-free/css<br>
 >>workorder.css<br>
+###2020/08/03
+>server:<br>
+>updated page:<br>
+>>welcome.blade.php:/client/esf-ffd/resources/views<br>
