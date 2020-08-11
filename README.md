@@ -10,3 +10,9 @@
 >server:<br>
 >updated page:<br>
 >>welcome.blade.php:/client/esf-ffd/resources/views<br>
+###2020/08/11
+>New SFTP<br>
+>/client/esf-fdd-dev<br>
+>updated page:<br>
+>>welcome.blade.php:/client/esf-fdd-dev/resources/views<br>
+
