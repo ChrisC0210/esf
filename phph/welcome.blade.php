@@ -98,9 +98,7 @@
   <!-- header -->
   <div class=" ">
     <div>
-      <img style="object-fit: cover;width: 100%;height: 100vh; opacity: 0.6;"
-        src="http://esf-ffd.vela.hk/dist/img/img-welcome.jpg"
-        alt="img">
+      <img style="object-fit: cover;width: 100%;height: 100vh; opacity: 0.6;" src="http://esf-ffd.vela.hk/dist/img/img-welcome.jpg" alt="img">
     </div>
   </div>
 
