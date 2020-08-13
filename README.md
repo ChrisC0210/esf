@@ -15,4 +15,19 @@
 >/client/esf-fdd-dev<br>
 >updated page:<br>
 >>welcome.blade.php:/client/esf-fdd-dev/resources/views<br>
+###2020/08/13
+>color esf-red<br>
+>updated page:<br>
+#####Home
+>>welcome.blade.php:/client/esf-fdd-dev/resources/views<br>
+#####RFQ
+>>/client/esf-fdd-dev/resources/views/rfq<br>
+>>edit.blade.php:http://esf-fdd-dev.vela.hk/rfq/create<br>
+>>listing.blade.php:http://esf-fdd-dev.vela.hk/rfq/listing<br>
+
+#####Work Orders
+>>/client/esf-fdd-dev/resources/views/workorder<br>
+>>edit.blade.php:http://esf-fdd-dev.vela.hk/workorder/create<br>
+>>listing.blade.php:http://esf-fdd-dev.vela.hk/workorder/listing<br>
+
 
