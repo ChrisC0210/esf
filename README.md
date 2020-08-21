@@ -30,4 +30,7 @@
 >>edit.blade.php:http://esf-fdd-dev.vela.hk/workorder/create<br>
 >>listing.blade.php:http://esf-fdd-dev.vela.hk/workorder/listing<br>
 
-
+###2020/08/21
+#####Log in
+>>/client/esf-fdd-dev/resources/views/auth<br>
+>>login.blade.php:https://esf-fdd-dev.vela.hk/login<br>
