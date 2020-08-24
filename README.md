@@ -34,3 +34,14 @@
 #####Log in
 >>/client/esf-fdd-dev/resources/views/auth<br>
 >>login.blade.php:https://esf-fdd-dev.vela.hk/login<br>
+
+###2020/08/24
+#####Change Color
+#####<img src="http://esf-ffd.vela.hk/dist/img/logo.png" alt="Logo" class="brand-image img-circle elevation-3 responsive mr-2" width="50" style="opacity: .8">
+>>/client/esf-fdd-dev/resources/views/contractor<br>
+>>/client/esf-fdd-dev/resources/views/special_event<br>
+>>/client/esf-fdd-dev/resources/views/job_nature<br>
+>>/client/esf-fdd-dev/resources/views/financial_year<br>
+>>/client/esf-fdd-dev/resources/views/attachment_classification<br>
+>>/client/esf-fdd-dev/resources/views/attachment_classification<br>
+
