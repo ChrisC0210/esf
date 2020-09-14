@@ -44,4 +44,9 @@
 >>/client/esf-fdd-dev/resources/views/financial_year<br>
 >>/client/esf-fdd-dev/resources/views/attachment_classification<br>
 >>/client/esf-fdd-dev/resources/views/attachment_classification<br>
-
+###2020/09/14
+#####Change Color (footer)
+>>/client/esf-fdd-dev/resources/views/layouts<br>
+>>app.blade.php<br>
+>>Find "English Schools Foundation"<br>
+>>Add class="esf-red"<br>
