@@ -58,14 +58,19 @@
 ```
 <style>
 .btn-primary:{
-  background-color: #7d002f;
-  border-color:  #7d002f;
+  background-color: #7d002f !important;
+  border-color:  #7d002f !important;
 }
 .btn-primary:hover{
   color:#fff;
   background-color:#300010 !important;
   border-color:#300010 !important;
   }
+
 </style>
 
+```
+>>css<br>
+```
+ style="background-color: #7d002f;border-color:  #7d002f;"
 ```
