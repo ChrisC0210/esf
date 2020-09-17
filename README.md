@@ -50,3 +50,22 @@
 >>app.blade.php<br>
 >>Find "English Schools Foundation"<br>
 >>Add class="esf-red"<br>
+###2020/09/17
+#####Change login btn color
+#####Log in
+>>/client/esf-fdd-dev/resources/views/auth<br>
+>>login.blade.php:https://esf-fdd-dev.vela.hk/login<br>
+```
+<style>
+.btn-primary:{
+  background-color: #7d002f;
+  border-color:  #7d002f;
+}
+.btn-primary:hover{
+  color:#fff;
+  background-color:#300010 !important;
+  border-color:#300010 !important;
+  }
+</style>
+
+```
