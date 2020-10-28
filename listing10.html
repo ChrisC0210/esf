@@ -1,1057 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 7]><html class="ie ie7 ltie8 ltie9" lang="en-US"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 ltie9" lang="en-US"><![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ESF-FDD</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSRF Token -->
-  <meta name="csrf-token" content="icYgNWFmJIO5sGRDymWBceweqorlgVPkQKAYitix">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link id="bsdp-css"
-    href="http://esf-ffd.vela.hk/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="English Schools Foundation - the largest English-medium international school organisation in Hong Kong. Our 22 schools and comprehensive programme of extra-curricular activities bring out the best in every student through a personalised approach to learning and by inspiring curious minds."
+    />
+    <meta property="og:description" content="Association of secondary and primary schools, kindergartens and a special school." />
+    <meta name="theme-color" content="#890033" />
+    <meta property="og:image" content="http://www.esf.edu.hk/wp-content/themes/esfcentral/images/ogimage.jpg" />
+    <title>English Schools Foundation | 22 International Schools in HK Home | English Schools Foundation | 22 International Schools in HK</title>
 
-  <!-- Select2 -->
-  <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/select2/css/select2.min.css">
-  <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-
-
-  <!-- summernote -->
-  <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/summernote/summernote-bs4.css">
-
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="http://esf-ffd.vela.hk/dist/css/adminlte.min.css">
-
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <!-- chris add -->
-  <link rel="stylesheet" href="./dist/css/all.min.css">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./assets/icon/esf.ico"> -->
+    <link rel="shortcut icon" href="https://www.esf.edu.hk/wp-content/uploads/2017/01/favicon.ico" type="image/x-icon" />
+    <!-- chris add -->
+    <link rel="stylesheet" href="./dist/css/all.min.css">
 </head>
 
-<body class="sidebar-mini" data-gr-c-s-loaded="true" cz-shortcut-listen="true" style="height: auto;">
-  <!-- Site wrapper -->
-  <div class="wrapper">
-    <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-      <!-- Left navbar links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-      </ul>
-
-      <!-- SEARCH FORM -->
-      <form class="form-inline ml-3">
-        <div class="input-group input-group-sm">
-          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-navbar" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </div>
-      </form>
-
-      <!-- Right navbar links -->
-      <ul class="navbar-nav ml-auto">
-        <!-- Notifications Dropdown Menu -->
-        <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="far fa-bell"></i>
-            <span class="badge badge-warning navbar-badge">15</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-item dropdown-header">15 Notifications</span>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="fas fa-envelope mr-2"></i> 4 new messages
-              <span class="float-right text-muted text-sm">3 mins</span>
+<body>
+    <!-- header -->
+    <div class="navbar navbar-expand-lg navbar-light sticky-top header-bg" style="background-color: rgba(125, 0, 47, 1);">
+        <nav class="container" style="width: 100%;">
+            <a class="navbar-brand col-3" href="https://www.esf.edu.hk" target="_blank">
+                <!-- <img src="./assets/img/hks-logo.svg" alt=""> -->
+                <img style="width:250px;" src="https://www.esf.edu.hk/wp-content/uploads/2016/06/esf-logo-main-2.png" alt="">
             </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="fas fa-users mr-2"></i> 8 friend requests
-              <span class="float-right text-muted text-sm">12 hours</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="fas fa-file mr-2"></i> 3 new reports
-              <span class="float-right text-muted text-sm">2 days</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="http://esf-ffd.vela.hk/logout" role="button" onclick="event.preventDefault();
-                                                       document.getElementById('logout-form').submit();">
-
-            <i class="fas fa-power-off"></i>
-          </a>
-          <form id="logout-form" action="http://esf-ffd.vela.hk/logout" method="POST" style="display: none;">
-            <input type="hidden" name="_token" value="31bc3yio6VNhaw7mxK6yePGvfjeg4vraZTRAXQjE">
-          </form>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-            <i class="fas fa-th-large"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!-- /.navbar -->
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-      <!-- Brand Logo -->
-      <a href="/" class="brand-link">
-        <img src="http://esf-ffd.vela.hk/dist/img/logo.png" alt="Logo" class="brand-image img-circle elevation-3"
-          style="opacity: .8">
-        <span class="brand-text font-weight-light">ESF</span>
-      </a>
-
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Sidebar user (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-          <div class="image">
-            <img src="http://esf-ffd.vela.hk/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
-              alt="User Image">
-          </div>
-          <div class="info">
-            <a href="#" class="d-block">tat</a>
-          </div>
-        </div>
-
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-                 with font-awesome or any other icon font library -->
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Dashboard
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="../../index.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Dashboard v1</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="../../index2.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Dashboard v2</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="../../index3.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Dashboard v3</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon far fa-file-alt"></i>
-                <p>
-                  RFQ
-                  <i class="fas fa-angle-left right"></i>
-                  <span class="badge badge-info right">6</span>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/rfq/create" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Create RFQ</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/rfq/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Listing</p>
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon far fa-file-alt"></i>
-                <p>
-                  Work Order
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/workorder/create" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Create</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/workorder/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Listing</p>
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-file-invoice-dollar"></i>
-                <p>
-                  Budgeting
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-
-                  <a href="http://esf-ffd.vela.hk/budget_tier1/5/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Current financial year</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="../charts/flot.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Report</p>
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-            <li class="nav-header">Setting</li>
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-user"></i>
-                <p>
-                  System User
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="../UI/general.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Listing</p>
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-database"></i>
-                <p>
-                  Master
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/master/contractor/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Contractor</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/master/budget_classification/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Budget Classification</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/master/special_event/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Special Event</p>
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/master/job_nature/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Job Nature</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/master/financial_year/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Financial Year</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/master/location_unit/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>School/Residential/Kindergarten</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/master/project_name/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>FMRI, Health Safety, Logistics only</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/master/work_category/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Work Category (for FM)</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="http://esf-ffd.vela.hk/master/work_item/listing" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Work Item (for FM)</p>
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a href="http://esf-ffd.vela.hk/approvalauth/edit" class="nav-link">
-                <i class="nav-icon fas fa-cog"></i>
-                <p>Approval Authorization</p>
-              </a>
-            </li>
-
-          </ul>
         </nav>
-        <!-- /.sidebar-menu -->
-      </div>
-      <!-- /.sidebar -->
-    </aside>
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper" style="min-height: 384.5px;">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
-            <div class="col-sm-6">
-              <h1>RFQ</h1>
-            </div>
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="http://esf-ffd.vela.hk/home">Home</a></li>
-                <li class="breadcrumb-item ">RFQ</li>
-                <li class="breadcrumb-item active">Listing</li>
-
-              </ol>
-            </div>
-          </div>
-        </div>
-        <!-- /.container-fluid -->
-      </section>
-
-      <!-- Main content -->
-      <section class="content">
-        <!-- Default box -->
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Listing</h3>
-
-            <!--                <div class="card-tools">
-                                      <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                                          <i class="fas fa-minus"></i></button>
-                                      <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-                                          <i class="fas fa-times"></i></button>
-                                  </div>-->
-          </div>
-          <div class="card-body">
-            <a class="btn btn-app" href="http://esf-ffd.vela.hk/rfq/create">
-              <i class="fas fa-edit"></i> New
-            </a>
-
-
-            <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
-              <div class="datatable_top_i">
-                <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Showing 1 to 10 of 16
-                  entries</div>
-              </div>
-              <div id="example2_filter" class="dataTables_filter"><label>Search:<input type="search"
-                    class="form-control form-control-sm" placeholder="" aria-controls="example2"></label></div>
-              <div id="example2_processing" class="dataTables_processing card" style="display: none;">Processing...
-              </div>
-              <table id="example2" class="table table-bordered table-hover dataTable dtr-inline"
-                aria-describedby="example2_info" role="grid">
-                <thead>
-                  <tr role="row">
-                    <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
-                      aria-sort="ascending" aria-label="RFQ#: activate to sort column descending"><input
-                        placeholder="RFQ#" style="width: 50px;"></th>
-                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
-                      aria-label="RFQ Desc: activate to sort column ascending"><input placeholder="RFQ Desc"
-                        style="width: 100%;"></th>
-                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
-                      aria-label="Entry Date: activate to sort column ascending"><input placeholder="Entry Date"
-                        style="width: 100%;"></th>
-                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
-                      aria-label="Expiry Date: activate to sort column ascending"><input placeholder="Expiry Date"
-                        style="width: 100%;"></th>
-                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
-                      aria-label="Initiator: activate to sort column ascending">Initiator</th>
-                    <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 200px;" aria-label="Action">
-                      Action</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <th rowspan="1" colspan="1"><input style="width: 50px;"></th>
-                    <th rowspan="1" colspan="1"><input style="width: 100%;"></th>
-                    <th rowspan="1" colspan="1"><input style="width: 100%;"></th>
-                    <th rowspan="1" colspan="1"><input style="width: 100%;"></th>
-                    <th rowspan="1" colspan="1">Initiator</th>
-                    <th rowspan="1" colspan="1">Action</th>
-                  </tr>
-                </tfoot>
-                <tbody>
-                  <tr role="row" class="odd">
-                    <td class="sorting_1" tabindex="0">0001</td>
-                    <td>2020-07-09 esf 1. 2fa 2. mariadb 3. 6 days backup for 4 weeks 4. google smtp 5. internal portal
-                      SSO azure 6. RFQ - Single/Restricted Procurement, Three quotations, Five quotations only, remove
-                      Single/Restricted
-                      Procurement,Tenders,Emergency Services/ Works,Non-compliance 7. RFQ - remove 'Invite Only FDD
-                      Approved Contractor' 8. contractor - multi job nature, add job nature in randomizer, work type 9.
-                      contractor - sometimes
-                      not enough field 10. RFQ - remove budget information 11. RFQ - Invited contractor - add remarks
-                      12. RFQ - add contractor when creating(2 manual + 5 approved) 13. Master - Anyone can create
-                      non-approved contractor,
-                      approve contractor workflow 14. Approve RFQ-&gt;Workorder-&gt;approve contractor at the same time
-                      15. RFQ - rfq contact email can be edited 16. RFE - label column "Send out RFQ email" 17. School
-                      contribution
-                      - depends on no of school 18. financial year - create work order checkbox, new seq 0001 19. add
-                      contract period, contract type dropdown 20. copying function 21. RFQ required 2 levels approval
-                      from operator,
-                      approved by line manager 22. Contractor database, need to upload attachment, will become approved
-                      contractor only when attachment is uploaded 23. Work order, add attachment tab. allow user to add
-                      attachment
-                      along the project cycle 24. Contractor database, ad contractor account code</td>
-                    <td>2020-06-30</td>
-                    <td>2020-06-30</td>
-                    <td>tat</td>
-                    <td><a href="http://esf-ffd.vela.hk/rfq/1/edit" class="btn btn-xs btn-primary"><i
-                          class="fa fa-edit"></i> Edit</a> <a href="http://esf-ffd.vela.hk/rfq/1/delete"
-                        class="btn btn-xs btn-danger"><i class="fa fa-fw fa-trash"></i></a> </td>
-                  </tr>
-                  <tr role="row" class="even">
-                    <td class="sorting_1" tabindex="0">0002</td>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                    <td>tat</td>
-                    <td><a href="http://esf-ffd.vela.hk/rfq/2/edit" class="btn btn-xs btn-primary"><i
-                          class="fa fa-edit"></i> Edit</a> <a href="http://esf-ffd.vela.hk/rfq/2/delete"
-                        class="btn btn-xs btn-danger"><i class="fa fa-fw fa-trash"></i></a> </td>
-                  </tr>
-                  <tr role="row" class="odd">
-                    <td class="sorting_1" tabindex="0">0003</td>
-                    <td>火火</td>
-                    <td>2020-07-29</td>
-                    <td>2020-07-29</td>
-                    <td>tat</td>
-                    <td><a href="http://esf-ffd.vela.hk/rfq/3/edit" class="btn btn-xs btn-primary"><i
-                          class="fa fa-edit"></i> Edit</a> <a href="http://esf-ffd.vela.hk/rfq/3/delete"
-                        class="btn btn-xs btn-danger"><i class="fa fa-fw fa-trash"></i></a> </td>
-                  </tr>
-                  <tr role="row" class="even">
-                    <td class="sorting_1" tabindex="0">0004</td>
-                    <td>fff</td>
-                    <td>2020-07-10</td>
-                    <td>2020-07-10</td>
-                    <td>tat</td>
-                    <td><a href="http://esf-ffd.vela.hk/rfq/4/edit" class="btn btn-xs btn-primary"><i
-                          class="fa fa-edit"></i> Edit</a> <a href="http://esf-ffd.vela.hk/rfq/4/delete"
-                        class="btn btn-xs btn-danger"><i class="fa fa-fw fa-trash"></i></a> </td>
-                  </tr>
-                  <tr role="row" class="odd">
-                    <td class="sorting_1" tabindex="0">0005</td>
-                    <td>l</td>
-                    <td>2020-07-08</td>
-                    <td>2020-07-08</td>
-                    <td>tat</td>
-                    <td><a href="http://esf-ffd.vela.hk/rfq/5/edit" class="btn btn-xs btn-primary"><i
-                          class="fa fa-edit"></i> Edit</a> <a href="http://esf-ffd.vela.hk/rfq/5/delete"
-                        class="btn btn-xs btn-danger"><i class="fa fa-fw fa-trash"></i></a> </td>
-                  </tr>
-                  <tr role="row" class="even">
-                    <td class="sorting_1" tabindex="0">0006</td>
-                    <td>l</td>
-                    <td>2020-07-08</td>
-                    <td>2020-07-08</td>
-                    <td>tat</td>
-                    <td><a href="http://esf-ffd.vela.hk/rfq/6/edit" class="btn btn-xs btn-primary"><i
-                          class="fa fa-edit"></i> Edit</a> <a href="http://esf-ffd.vela.hk/rfq/6/delete"
-                        class="btn btn-xs btn-danger"><i class="fa fa-fw fa-trash"></i></a> </td>
-                  </tr>
-                  <tr role="row" class="odd">
-                    <td class="sorting_1" tabindex="0">0007</td>
-                    <td>l</td>
-                    <td>2020-07-08</td>
-                    <td>2020-07-08</td>
-                    <td>tat</td>
-                    <td><a href="http://esf-ffd.vela.hk/rfq/7/edit" class="btn btn-xs btn-primary"><i
-                          class="fa fa-edit"></i> Edit</a> <a href="http://esf-ffd.vela.hk/rfq/7/delete"
-                        class="btn btn-xs btn-danger"><i class="fa fa-fw fa-trash"></i></a> </td>
-                  </tr>
-                  <tr role="row" class="even">
-                    <td class="sorting_1" tabindex="0">0008</td>
-                    <td>l</td>
-                    <td>2020-07-08</td>
-                    <td>2020-07-08</td>
-                    <td>tat</td>
-                    <td><a href="http://esf-ffd.vela.hk/rfq/8/edit" class="btn btn-xs btn-primary"><i
-                          class="fa fa-edit"></i> Edit</a> <a href="http://esf-ffd.vela.hk/rfq/8/delete"
-                        class="btn btn-xs btn-danger"><i class="fa fa-fw fa-trash"></i></a> </td>
-                  </tr>
-                  <tr role="row" class="odd">
-                    <td class="sorting_1" tabindex="0">0009</td>
-                    <td>xxxxx</td>
-                    <td>2020-07-09</td>
-                    <td>2020-07-09</td>
-                    <td>tat</td>
-                    <td><a href="http://esf-ffd.vela.hk/rfq/9/edit" class="btn btn-xs btn-primary"><i
-                          class="fa fa-edit"></i> Edit</a> <a href="http://esf-ffd.vela.hk/rfq/9/delete"
-                        class="btn btn-xs btn-danger"><i class="fa fa-fw fa-trash"></i></a> </td>
-                  </tr>
-                  <tr role="row" class="even">
-                    <td class="sorting_1" tabindex="0">0010</td>
-                    <td>hjghj</td>
-                    <td>2020-07-09</td>
-                    <td>2020-07-09</td>
-                    <td>tat</td>
-                    <td><a href="http://esf-ffd.vela.hk/rfq/10/edit" class="btn btn-xs btn-primary"><i
-                          class="fa fa-edit"></i> Edit</a> <a href="http://esf-ffd.vela.hk/rfq/10/delete"
-                        class="btn btn-xs btn-danger"><i class="fa fa-fw fa-trash"></i></a> </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="dataTables_info">Showing 1 to 10 of 16 entries</div>
-              <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
-                <ul class="pagination">
-                  <li class="paginate_button page-item previous disabled" id="example2_previous"><a href="#"
-                      aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                  <li class="paginate_button page-item active"><a href="#" aria-controls="example2" data-dt-idx="1"
-                      tabindex="0" class="page-link">1</a></li>
-                  <li class="paginate_button page-item "><a href="#" aria-controls="example2" data-dt-idx="2"
-                      tabindex="0" class="page-link">2</a></li>
-                  <li class="paginate_button page-item next" id="example2_next"><a href="#" aria-controls="example2"
-                      data-dt-idx="3" tabindex="0" class="page-link">Next</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- /.card-body -->
-          <div class="card-footer">
-
-          </div>
-          <!-- /.card-footer-->
-        </div>
-        <!-- /.card -->
-
-      </section>
-      <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
+    <!-- header -->
+
+    <!-- form start -->
+    <div class="container col-12 col-sm-12 col-lg-6 mt-4 mb-4">
+        <div class="card text-r-1-3-1">
+            <div class="card-header mt-2">
+                <h3 class="card-title text-r-5-3-5 text-center">RFQ Confirm Info</h3>
+
+                <!-- <div class="card-tools">
+							<button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+								<i class="fas fa-minus"></i></button>
+							<button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+								<i class="fas fa-times"></i></button>
+						</div> -->
+            </div>
+            <div class="card-body">
+                <!-- RFQ info -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- text input -->
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label font-weight-bold">RFQ #</label>
+                            <div class="col-sm-4 mt-2">
+                                <div>0001</div>
+                                <!-- <input type="text" class="form-control" id="" placeholder="RFQ #" value="0001" disabled=""> -->
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label font-weight-bold">School</label>
+                            <div class="col-sm-6 mt-2">
+                                <div>West Island School</div>
+                                <div>ESF Tsing Yi International Kindergarten</div>
+                                <div>IS,PS,ESFC</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label font-weight-bold">Work Description</label>
+                            <div class="col-sm-6 mt-2">
+                                <div>Text your Work Description here</div>
+                                <!-- <textarea class="form-control" id="work_description" name="work_description" rows="3"
+												placeholder="Enter ...">abc</textarea> -->
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label font-weight-bold">Entry Date</label>
+                            <div class="col-sm-4 mt-2">
+                                <div>2020-06-30</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label font-weight-bold">Application Deadline</label>
+                            <div class="col-sm-4 mt-2">
+                                <div>2020-07-16</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- RFQ info -->
+                <!-- CheckStatus -->
+                <form action="" class="needs-validation" novalidate>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="checkStatus1" value="Yes">
+                                <label class="form-check-label" for="checkStatus1">
+									I want to submit the tender
+								</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="checkStatus2" value="Decline">
+                                <label class="form-check-label" for="checkStatus2">
+									I don’t have the interest on this project
+								</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mb-4 mt-4">
+                            <div class="Box" style="display:none">
+                                <div class="form-group">
+                                    <label for="inputEmail">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
+                                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPhone">Phone</label>
+                                    <input type="password" class="form-control" id="inputPhone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputName">Name</label>
+                                    <input type="text" class="form-control" id="inputName" required>
+                                    <div class="invalid-tooltip">
+                                        Please provide a valid city.
+                                    </div>
+                                </div>
+                                <div class="form-group is-invalid">
+                                    <div class="mb-2">File</div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="file-upload">
+                                        <label class="custom-file-label text-break" style="overflow: hidden;" for="file-upload" data-browse="Upload">Choose
+											file</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-6 text-center">
+                            <button type="submit" class="btn esfBtn text-r-1-3-1" id="RFQconfirm" value="RFQconfirm">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- CheckStatus -->
+            </div>
+            <!-- /.card-body -->
+
+            <!-- /.card-footer-->
+        </div>
+    </div>
+    <!-- form end -->
 
 
+    <!-- footer -->
+    <footer class="text-r-1-3-1">
+        <div class="footer-wrapper">
+            <div class="container">
+                <div class="footer-wrapper p-4">
+                    <div class="row justify-content-between">
+                        <div>
+                            <p class="col-3 col-sm-12 footer-title">
+                                <a href="https://www.esf.edu.hk">
+                                    <img src="https://www.esf.edu.hk/wp-content/uploads/2016/06/esf-logo-main-2.png">
+                                </a>
+                            </p>
+                        </div>
+                        <div></div>
+                    </div>
+                    <!-- <h3 class="footer-title">ENGLISH SCHOOLS FOUNDATION<br><span class="footer-tchi">英基學校協會</span></h3> -->
+                    <div class="row justify-content-between">
+                        <div class="col-sm-12 col-lg-6">
+                            <p><a href="tel:+852 2574 2351">+ 852 2574 2351</a></p>
+                            <p><a href="mailto:info@esfcentre.edu.hk">info@esfcentre.edu.hk</a></p>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <p class="text-lg-right">香港鰂魚涌 英皇道1063號25樓</p>
+                            <p class="text-lg-right">25/F 1063 King's Road Quarry Bay Hong Kong</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <footer class="main-footer">
-      <div class="float-right d-none d-sm-block">
-        <b>Version</b> 1.0
-      </div>
-      <strong>Copyright © 2020 <a href="/" class="esf-red">English Schools Foundation</a>.</strong> All rights reserved.
+        <div class="copyright-wrapper">
+            <div class="container d-flex justify-content-lg-between flex-lg-row flex-md-column flex-sm-column footer-box text-r-0-1-0 pt-4 pb-2">
+                <p> © The English Schools Foundation - All rights reserved</p>
+                <p>
+                    <a href="https://www.esf.edu.hk/privacy/">Privacy Policy</a> |
+                    <a href="https://www.esf.edu.hk/disclaimer/">Disclaimer</a>
+                </p>
+            </div>
+        </div>
     </footer>
+    <!-- footer -->
 
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-      <!-- Control sidebar content goes here -->
-      <div class="p-3 control-sidebar-content">
-        <h5>Customize AdminLTE</h5>
-        <hr class="mb-2">
-        <div class="mb-1"><input type="checkbox" value="1" class="mr-1"><span>No Navbar border</span></div>
-        <div class="mb-1"><input type="checkbox" value="1" class="mr-1"><span>Body small text</span></div>
-        <div class="mb-1"><input type="checkbox" value="1" class="mr-1"><span>Navbar small text</span></div>
-        <div class="mb-1"><input type="checkbox" value="1" class="mr-1"><span>Sidebar nav small text</span></div>
-        <div class="mb-1"><input type="checkbox" value="1" class="mr-1"><span>Footer small text</span></div>
-        <div class="mb-1"><input type="checkbox" value="1" class="mr-1"><span>Sidebar nav flat style</span></div>
-        <div class="mb-1"><input type="checkbox" value="1" class="mr-1"><span>Sidebar nav legacy style</span></div>
-        <div class="mb-1"><input type="checkbox" value="1" class="mr-1"><span>Sidebar nav compact</span></div>
-        <div class="mb-1"><input type="checkbox" value="1" class="mr-1"><span>Sidebar nav child indent</span></div>
-        <div class="mb-1"><input type="checkbox" value="1" class="mr-1"><span>Main Sidebar disable hover/focus auto
-            expand</span></div>
-        <div class="mb-4"><input type="checkbox" value="1" class="mr-1"><span>Brand small text</span></div>
-        <h6>Navbar Variants</h6>
-        <div class="d-flex">
-          <div class="d-flex flex-wrap mb-3">
-            <div class="bg-primary elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-secondary elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-info elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-success elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-danger elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-indigo elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-purple elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-pink elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-navy elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-lightblue elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-teal elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-cyan elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-dark elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-gray-dark elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-gray elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-light elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-warning elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-white elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-            <div class="bg-orange elevation-2"
-              style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-            </div>
-          </div>
-        </div>
-        <h6>Accent Color Variants</h6>
-        <div class="d-flex"></div>
-        <div class="d-flex flex-wrap mb-3">
-          <div class="bg-primary elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-warning elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-info elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-danger elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-success elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-indigo elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-lightblue elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-navy elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-purple elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-fuchsia elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-pink elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-maroon elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-orange elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-lime elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-teal elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-olive elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-        </div>
-        <h6>Dark Sidebar Variants</h6>
-        <div class="d-flex"></div>
-        <div class="d-flex flex-wrap mb-3">
-          <div class="bg-primary elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-warning elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-info elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-danger elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-success elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-indigo elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-lightblue elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-navy elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-purple elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-fuchsia elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-pink elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-maroon elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-orange elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-lime elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-teal elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-olive elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-        </div>
-        <h6>Light Sidebar Variants</h6>
-        <div class="d-flex"></div>
-        <div class="d-flex flex-wrap mb-3">
-          <div class="bg-primary elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-warning elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-info elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-danger elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-success elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-indigo elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-lightblue elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-navy elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-purple elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-fuchsia elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-pink elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-maroon elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-orange elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-lime elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-teal elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-olive elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-        </div>
-        <h6>Brand Logo Variants</h6>
-        <div class="d-flex"></div>
-        <div class="d-flex flex-wrap mb-3">
-          <div class="bg-primary elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-secondary elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-info elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-success elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-danger elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-indigo elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-purple elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-pink elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-navy elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-lightblue elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-teal elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-cyan elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-dark elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-gray-dark elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-gray elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-light elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-warning elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-white elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div>
-          <div class="bg-orange elevation-2"
-            style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;">
-          </div><a href="javascript:void(0)">clear</a>
-        </div>
-      </div>
-    </aside>
-    <!-- /.control-sidebar -->
-    <div id="sidebar-overlay"></div>
-  </div>
-  <!-- ./wrapper -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./dist/js/popper.min.js"></script>
+    <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function() {
+            var RFQconfirm = document.getElementById("RFQconfirm");
+            RFQconfirm.onclick = function() {
+                if (confirm("Are you sure you want to send this form?")) {
+                    alert("Thanks for your submit!");
+                } else {
+                    //alert(" ");
+                }
+            }
+        };
+        $('input[type="radio"]').click(function() {
+            if ($(this).attr("value") == "Decline") {
+                $(".Box").hide('fast');
+                $(".Box").addClass('hideBox');
+            }
+            if ($(this).attr("value") == "Yes") {
+                $(".Box").show('slow');
 
-  <!-- jQuery -->
-  <script src="http://esf-ffd.vela.hk/plugins/jquery/jquery.min.js"></script>
-  <!-- Bootstrap 4 -->
-  <script src="http://esf-ffd.vela.hk/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Select2 -->
-  <script src="http://esf-ffd.vela.hk/plugins/select2/js/select2.full.min.js"></script>
-  <!-- DataTables -->
-  <script src="http://esf-ffd.vela.hk/plugins/datatables/jquery.dataTables.min.js"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-
-  <script src="http://esf-ffd.vela.hk/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.min.js"
-    charset="UTF-8"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/daterangepicker/daterangepicker.js"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/moment/moment.min.js"></script>
-  <!-- Tempusdominus Bootstrap 4 -->
-  <script src="http://esf-ffd.vela.hk/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/plugins/piexif.js"
-    type="text/javascript"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/plugins/sortable.js"
-    type="text/javascript"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/fileinput.js"
-    type="text/javascript"></script>
-
-  <script src="http://esf-ffd.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/locales/es.js"
-    type="text/javascript"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/kartik-v-bootstrap-fileinput/themes/fas/theme.js"
-    type="text/javascript"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/kartik-v-bootstrap-fileinput/themes/explorer-fas/theme.js"
-    type="text/javascript"></script>
-
-
-  <!-- for Work Order -->
-  <link rel="stylesheet" href="http://esf-ffd.vela.hk/css/bootstrap-multiselect.css">
-  <script type="text/javascript" src="http://esf-ffd.vela.hk/js/bootstrap-multiselect.js"></script>
-
-  <link rel="stylesheet" href="http://esf-ffd.vela.hk/css/bootstrap4-toggle.min.css">
-  <script type="text/javascript" src="http://esf-ffd.vela.hk/js/bootstrap4-toggle.min.js"></script>
-
-  <link rel="stylesheet" href="http://esf-ffd.vela.hk/css/workorder.css">
-  <script type="text/javascript" src="http://esf-ffd.vela.hk/js/custom.js"></script>
-  <script type="text/javascript" src="http://esf-ffd.vela.hk/js/rfq.js"></script>
-
-  <!-- AdminLTE App -->
-  <script src="http://esf-ffd.vela.hk/dist/js/adminlte.min.js"></script>
-  <!-- AdminLTE for demo purposes -->
-  <script src="http://esf-ffd.vela.hk/dist/js/demo.js"></script>
-  <script src="http://esf-ffd.vela.hk/plugins/summernote/summernote-bs4.min.js"></script>
-  <script>
-    $('.datepicker*').datepicker({
-      format: 'yyyy-mm-dd',
-      language: "zh-TW"
-    });
-    $('.select2*').select2();
-
-    //Timepicker
-    $('#timepicker').datetimepicker({
-      format: 'HH:mm'
-    })
-  </script>
-  <script>
-    $(function () {
-
-      $('#example2').DataTable({
-        "paging": true,
-        "lengthChange": false,
-        "searching": true,
-        "ordering": true,
-        "info": true,
-        "autoWidth": false,
-        "responsive": true,
-        serverSide: true,
-        processing: true,
-        ajax: {
-          url: 'http://esf-ffd.vela.hk/rfq/listing/Data',
-          data: function (d) {
-            d.s_form_class_id = $('select[name=s_form_class_id]').val();
-
-          }
-        },
-        "columns": [
-
-          {
-            data: 'rfq_no.',
-            name: 'rfq.rfq_no',
-            title: 'RFQ#'
-          }, {
-            data: 'work_description',
-            name: 'rfq.work_description',
-            title: 'RFQ Desc'
-          }, {
-            data: 'entry_date',
-            name: 'rfq.entry_date',
-            title: 'Entry Date'
-          }, {
-            data: 'application_deadline',
-            name: 'rfq.application_deadline',
-            title: 'Expiry Date'
-          }, {
-            data: 'create_user_name',
-            name: 'users.name',
-            title: 'Initiator'
-          },
-
-          {
-            "defaultContent": "",
-            "data": "action",
-            "name": "action",
-            "title": "Action",
-            "render": null,
-            "orderable": false,
-            "searchable": false,
-            "width": "200px"
-          }
-        ],
-        "dom": "B<'datatable_top_i'i>frtip",
-        //                buttons:["csv","excel","pdf","print"],
-        initComplete: function () {
-          this.api().columns([0]).every(function () {
-            var column = this;
-            var input = document.createElement("input");
-            $(input).css("width", "50").appendTo($(column.footer()).empty())
-              .on('change keyup', function () {
-                column.search($(this).val(), false, false, true).draw();
-              });
-          });
-          this.api().columns([0]).every(function () {
-            var column = this;
-            var input = document.createElement("input");
-            var title = $(column.header()).html();
-            $(input).css("width", "50").appendTo($(column.header()).empty())
-              .on('change keyup', function () {
-                column.search($(this).val(), false, false, true).draw();
-              }).attr("placeholder", title);
-          });
-
-          this.api().columns([1, 2, 3]).every(function () {
-            var column = this;
-            var input = document.createElement("input");
-            $(input).css("width", "100%").appendTo($(column.footer()).empty())
-              .on('change keyup', function () {
-                column.search($(this).val(), false, false, true).draw();
-              });
-          });
-          this.api().columns([1, 2, 3]).every(function () {
-            var column = this;
-            var input = document.createElement("input");
-            var title = $(column.header()).html();
-            $(input).css("width", "100%").appendTo($(column.header()).empty())
-              .on('change keyup', function () {
-                column.search($(this).val(), false, false, true).draw();
-              }).attr("placeholder", title);
-          });
-        }
-      });
-    });
-  </script>
-
-
-  <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe>
-  <div id="GOOGLE_INPUT_CHEXT_FLAG" input=""
-    input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}"
-    style="display: none;"></div>
+            }
+        });
+        $('input[type="radio"]').trigger('click');
+        $('#file-upload').on('change', function() {
+            //get the file name
+            var fileName = $(this).val();
+            //replace the "Choose a file" label
+            $(this).next('.custom-file-label').html(fileName);
+        });
+    </script>
 </body>
 
 </html>
