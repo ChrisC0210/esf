@@ -1,0 +1,836 @@
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ESF-FDD</title>
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="dpno7Wt6ywzdWpUmlnw4kRsPKDMx9vz99ZXdWrPa">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <lk id="bsdp-css" h="https://esf-fdd-dev.vela.hk/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/daterangepicker/daterangepicker.css">
+        <!-- Tempusdominus Bbootstrap 4 -->
+        <link rel="stylesheet" <!-- Select2 -->
+        <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/select2/css/select2.min.css">
+
+        < <!-- summernote -->
+            <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/summernote/summernote-bs4.css">
+
+            <link href="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="https://esf-fdd-dev.vela.hk/css/steps.css" media="all" rel="stylesheet" type="text/css" />
+            <link href="https://esf-fdd-dev.vela.hk/dist/css/all.min.css" media="all" rel="stylesheet" type="text/css" />
+            <!-- Google Font: Source Sans Pro -->
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+            <!-- overlayScrollbars -->
+            <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/dist/css/adminlte.min.css">
+            <link href="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/themes/explorer-fas/theme.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <!-- S ite wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a clasnav-link " data-widget="pushmenu " href="# " role="button "><i class="fas fa-bars "></i></a>
+                    </li>
+         </ul           >
+
+      <!  -- Right navbar links -->
+               <u   l class="navbar-nav ml-auto ">
+
+
+        <!        <l    <a class="nav-link " data-toggle="dropdown " href="# ">
+                            <i class="far fa-bell "></i>
+                
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right ">
+
+  
+
+                          <i class="fas fa-envelope "></i> Email alert
+                        <span class="float-right text-muted text-sm ">
+                         <input type="checkbox " name="email_alert_btn " id="email_alert_btn ">
+                          </span>
+
+
+/a>
+                      </div>
+        </l         i>
+        <li class="nav-i <a class="</form>
+nav-link" href="htli//esf-fdd-dev.vela.hk/logout" role="button" onclick="event.preventDefault();
+    
+                        <i class=" fas fa-power-off "></i>
+                        </a>
+                      <form id="logout-form " action="https://esf-fdd-dev.vela.hk/logout " method="POST " style="display: none; ">
+                      <input type="hidden " name="_token " value="dpno7Wt6ywzdWpUmlnw4kRsPKDMx9vz99ZXdWrPa ">
+                  </form>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link " data-widget="control-sidebar " data-slide="true " href="# " role="button ">
+                  <i class="fas fa-th-large "></i>
+                  </a>
+                </li>
+                </ul>  navbar -->ain Sidebar Container -->
+              <aside class="main-sidebar sidebar-dark-primary elevation-4 ">
+              <!-- Brand Logo -->
+      <a href="/ " class="brand-link ">
+                <img src="https://esf-fdd-dev.vela.hk/dist/img/logo.png " alt="Logo " class="brand-image img-circle elevation-3 "
+              style="opacity: .8 ">
+            <span class="brand-text font-weight-light ">ESF</span>
+                </a>
+            
+                    <!-- Sidebar -->
+                  <div class="sidebar ">
+                    <!-- Sidebar user (optional) -->
+                 <d     iv class="user-panel mt-3 pb-3 mb-3 d-f lex ">
+                        <img src="https://esf-fdd-dev.vela.hk/dist/img/user.png " class="img-circle elevation-2 " alt="User Image ">
+                    </
+div>
+                      <a href="# " class="d-block ">Alex Ma</a>
+          
+                      </div>
+            </          div>
+
+
+       <!-- Sidebar     av class="mt-2 ">
+                 <u         l class="nav nav-pills nav-sidebar flex-column " data-widget="treeview " role="menu " data-accordion="false ">
+               <!               -- Add icons to the links using the .nav-icon class
+                                 with font-awesome or any other icon font library -->
+                    
+                      <li           class="nav-item has-treeview ">
+                <a                   href="# " class="nav-link ">
+                  <i class="nav-icon far fa-file-alt "></i>
+                                <p>
+                                  RFQ
+                  <i class="fa s fa-angle-left right "></i>
+                                      <span class="badge badge-info right ">0</span>
+                  </                    p>
+                   </a>                 
+                      <u            l class="nav nav-treeview ">
+                                  <li class="nav-item ">
+                  <a href="htt ps://esf-fdd-dev.vela.hk/rfq/create " class="nav-link ">
+                                        <i class="far fa-circle nav-icon "></i>
+                                          <p>Create RFQ</p>
+                                        </a>
+                                    </li>
+                                  <li class="nav-item ">
+
+                                    <i class="far fa-circle nav-icon "></i>
+                                  <p>Listing</p>
+
+                              </li>
+                
+                                </ul>
+                      </        li>
+                    
+                      <li           class="nav-item has-treeview ">
+                <a                   href="# " class="nav-link ">
+                <i class="nav-icon far fa-file-alt "></i>
+                <p>
+                                    Work Order
+                                  <i class="fas fa-angle-left right "></i>
+                                  <span class="badge badge-info right " style=" ">
+                      2  
+                                      </span>
+                         </             p>
+                          </a>          
+                             <u     l class="nav nav-treeview ">
+                                  <li
+ class="nav-item ">
+                                      <i class="far fa-circle nav-icon "></i>
+                                        <p>Create</p>
+                                        </a>
+                     </                 li>
+                    
+                                  <li
+ class="nav-item ">
+                                    <i class="far fa-circle nav-icon "></i>
+                                  <p>Listing</p>
+                  </a>
+                              </li>
+                
+                                </ul>
+                 </             li>
+                    
+                             <li    class="nav-item has-treeview ">
+                        <a           href="# " class="nav-link ">
+                <i class="nav-icon far fa-file-alt "></i>
+                <p>
+                  Payment
+                                    <i class="fas fa-angle-left right "></i>
+                                  <span class="badge badge-danger right ">
+                    4
+                                  </span>
+                  
+                                    </p>
+                             </a>       
+                      
+                       <u           l class="nav nav-treeview ">
+                                  <li class="nav-item ">
+                  <a href="https://esf-fdd-dev.vela.hk/invoice/listing " class="nav-link ">
+                                      <i class="far fa-circle nav-icon "></i>
+                                        <p>Listing</p>
+                                        </a>
+                            </          li>
+                    
+                                  <li class="nav-item ">
+                                    <a href="https://esf-fdd-dev.vela.hk/invoice/export/step1 " class="nav-link ">
+                                        <i class="far fa-circle nav-icon "></i>
+                                          <p>Export</p>
+                                        </a>
+                                    </li>
+                                  <li class="nav-item ">
+                                  <a href="https://esf-fdd-dev.vela.hk/invoice/import_cheque/step1 " class="nav-link ">
+                                  <i class="far fa-circle nav-icon "></i>
+                    <p>Import Cheque</p>
+                                 </a>
+                                </li>
+                                </ul>
+                              </li>
+                    
+                 <li                class="nav-item has-treeview ">
+
+                                    <i class="nav-icon far fa-file-alt "></i>
+                <p>
+                  Variation Order
+                                    <i class="fas fa-angle-left right "></i>
+                
+                                  <span class="badge badge-warning right ">
+                                      0
+                                      </span>
+                           </           p>
+                            </a>        
+                               <u   l class="nav nav-treeview ">
+                                  <li class="nav-item ">
+                                  <a href="https://esf-fdd-dev.vela.hk/vo/listing " class="nav-link ">
+                                  <i class="far fa-circle nav-icon "></i>
+                    <p>Listing</p>
+                                </a>
+                                </li>
+                                </ul>
+             </                 li>
+                    
+                          <li       class="nav-item has-treeview ">
+                                <a href="# " class="nav-link ">
+                                <i class="nav-icon fas fa-file-invoice-dollar "></i>
+                                <p>
+                                    Budgeting
+                                      <i class="right fas fa-angle-left "></i>
+                       </               p>
+                        </a>            
+                           <u       l class="nav nav-treeview ">
+                                  <li class="nav-item ">
+                  <a href=  "https://esf-fdd-dev.vela.hk/budget_tier1/2/listing " class="nav-link ">
+                                  <i class="far fa-circle nav-icon "></i>
+                    <p>Current financial year</p>
+                                </a>
+                                </li>
+                                </ul>
+                        </      li>
+                    
+                               <li class="nav-item has-treeview ">
+                                <a href="# " class="nav-link ">
+                                <i class="nav-icon fas fa-calendar-alt "></i>
+                                <p>
+                                    Report
+                                      <i class="right fas fa-angle-left "></i>
+                                </      p>
+                                 </a>   
+                        <u          l class="nav nav-treeview ">
+                                  <li class="nav-item ">
+                                    <a href="https://esf-fdd-dev.vela.hk/report/dailyReportSummary " class="nav-link ">
+                                        <i class="far fa-circle nav-icon "></i>
+                                          <p>Daily Summary</p>
+                                        </a>
+                                    </li>
+                                  <li class="nav-item ">
+                                    <a href="https://esf-fdd-dev.vela.hk/workorder/report/wo_main_table " class="nav-link ">
+                                        <i class="far fa-circle nav-icon "></i>
+                                          <p>Work Order Main Table</p>
+                                        </a>
+                                    </li>
+                                  <li class="nav-item ">
+                                    <a href="https://esf-fdd-dev.vela.hk/workorder/report/invocie_detail_table " class="nav-link ">
+                                        <i class="far fa-circle nav-icon "></i>
+                                          <p>Invoice Detail Table</p>
+                                        </a>
+                                    </li>
+                                  <li class="nav-item ">
+                                    <a href="https://esf-fdd-dev.vela.hk/workorder/report/variation_table " class="nav-link ">
+                                        <i class="far fa-circle nav-icon "></i>
+                                          <p>Variation Table</p>
+                                        </a>
+                                    </li>
+                                  <li class="nav-item ">
+                                    <a href="https://esf-fdd-dev.vela.hk/workorder/report/account_outstanding_payment " class="nav-link ">
+                                        <i class="far fa-circle nav-icon "></i>
+                                          <p>Outstanding Payment</p>
+                                        </a>
+                                    </li>
+                                  <li class="nav-item ">
+                                    <a href="https://esf-fdd-dev.vela.hk/workorder/report/download_report_input " class="nav-link ">
+                                        <i class="far fa-circle nav-icon "></i>
+                                          <p>Invoice Query</p>
+                                        </a>
+                                    </li>
+                                  <li class="nav-item ">
+                    <a href="https://esf-fdd-dev.vela.hk/workorder/report/download_VoSum_input " class="nav-link ">
+                                  <i class="far fa-circle nav-icon "></i>
+                    <p>VO Sum</p>
+                                </a>
+                                </li>
+                                </ul>
+                   </           li>
+                    
+                             <li class="nav-item ">
+                              <a href="https://esf-fdd-dev.vela.hk/user/29/edit_password " class="nav-link ">
+                              <i class="nav-icon fas fa-key "></i>
+                <p>
+                                Reset Password
+                                </p>
+                                </a>
+                       </       li>
+                    
+                  <l              pa href="https://esf-fdd-dev.vela.hk/message/chatbox " class="nav-link ">
+                            </a>
+        </p>   </li>
+
+
+
+              </a>
+                      </li>
+          
+        
+        
+                </ul>
+
+                <!-- /.sidebar-menu -->
+              </div>
+              <!-- /.sidebar -->
+            </aside>
+        
+       <!-- Con     tent Wrapper. Contains page content -->
+    <div class="content-wrapper ">
+             <!-- Conte nt Header (Page header) -->
+                  <section class="content-header ">
+                    <div class="container-fluid ">
+          <div c                lass="row mb-2 ">
+        
+            <div class="col-sm-6 ">
+              <i        mg src="https://esf-fdd-dev.vela.hk/dist/img/logo.png " alt="Logo "
+                clas        s="brand-image img-circle elevation-3 responsive " width="50 " style="opacity: .8 ">
+              <h1 class=        "esf-red " style="vertical-align:middle;display:inline-block;margin-left:5px ">
+                RFQ</h1>        
+            </div>        
+
+            <div cla        ss="col-sm-6 ">
+              <o        l class="breadcrumb float-sm-right ">
+                        <li class="breadcrumb-item "><a href="https://esf-fdd-dev.vela.hk/home ">Home</a></li>
+                      
+                  <li class="breadcrumb-item ">RFQ</li>
+                        <li class="breadcrumb-item active ">Listing</li>
+
+                      </ol>
+                    </div>
+          </div>
+                </div><!-- /.container-fluid -->
+              </section>
+        
+      <!-- Main content -->
+              <section class="content ">
+        <!-- Default box -->
+        <div class="card ">
+          <div class="card-header ">
+            <h3 class="card-title ">Listing</h3>
+
+                    <!--                                <div class="card-tools ">
+                                                            <button type="button " class="btn btn-tool " data-card-widget="collapse " data-toggle="tooltip " title="Collapse ">
+                                            <i class="fas fa-minus "></i></button>
+                                                        <button type="button " class="btn btn-tool " data-card-widget="remove " data-toggle="tooltip " title="Remove ">
+                                           <i class="fas fa-times "></i></button>
+                                        </div>-->
+               </div>   
+             <div class="ca rd-body ">
+                   <a class="bt n btn-app " href="https://esf-fdd-dev.vela.hk/rfq/create ">
+              <i class="fas fa-edit "></i> New
+            </a>
+            <div class="row ">
+              <div class="col-sm-2 ">
+                <strong>Status:</strong>
+                <select class="form-control " id="s_rfq_approval_status " name="s_rfq_approval_status ">
+                  <option value=" ">All</option>
+                  <option value="PENDING ">Pending</option>
+                  <option value="C_WAITING_FOR_PREAPPROVAL ">Waiting for pre-approval(Contractor list)</option>
+                  <option value="C_WAITING_FOR_APPROVAL ">Waiting for approval(Contractor list)</option>
+                  <option value="C_APPROVED ">Contractor List Approved, invitation emails sent, waiting for application
+                    deadline</option>
+                       <o   ption value="RFQ_APPROVED ">Approved</option>
+                     <o     ption value="REJECT ">Reject</option>
+                         <optio n value="AMEND ">Amend/Comment</option>
+                        <optio  n value="WAITING_TO_BE_PRE_CLOSED ">Waiting to be voided(Pre)</option>
+                  <option value="WAITING_TO_BE_CLOSED ">Waiting to be voided</option>
+                  <option value="CONFIRM_TO_CLOSE ">Void</option>
+                </select>
+              </div>
+              <div class="col-sm-2 ">
+                <strong>Department:</strong>
+                <select class="form-control " id="s_department_id " name="s_department_id ">
+                  <option value=" ">All</option>
+                  <option value="1 ">Project</option>
+                  <option value="2 ">Central</option>
+                     <o     ption value="3 ">ESL</option>
+                         <o ption value="4 ">FM</option>
+                        <optio  n value="5 ">H&S</option>
+                      <optio    n value="6 ">Logistics</option>
+                  <option value="7 ">Resi</option>
+                  <option value="8 ">ESL(Project)</option>
+                </select>
+              </div>
+                     <div c lass="col-sm-2 ">
+                      <stro ng>Authorization to Confirm:</strong>
+                     <select    class="form-control " id="s_auth " name="s_auth ">
+                     <optio     n value"5 ">All</option>
+                  <o        ption value="1 " selected="selected ">Yes</option>
+                          <option value="0 ">No</option>
+                </select>
+              </div>
+                 <d     iv class="col-sm-2 ">
+                 <str       ong>Staff:</strong>
+                      <select   class="form-control item-content " id="s_user_id " name="s_user_id "
+                      style="wid th: 100%;max-width:100%; ">
+                    <option se      lected value=" ">All</option>
+                         <option cl ass="related-staff " value="29 " selected="selected ">
+                          <div cla  ss="related-staff ">Alex Ma</div>
+                      </option>    
+                     <option cl     ass=" " value="48 ">
+                     <div cla       ss=" ">Ann Chan</div>
+                       </option>   
+                      <option cl    ass=" " value="23 ">
+                    <div class=" ">Brandy Yuen</div>
+                    </opti      on>
+                        <o  ption class=" " value="31 ">
+                            <div class=" ">Candy Wong</div>
+                     </opti     on>
+                         <option cl ass=" " value="46 ">
+                          <div cla  ss=" ">Cathee Ho</div>
+                      </option>    
+                     <option cl     ass=" " value="24 ">
+                     <div cla       ss=" ">Charles Wong</div>
+                        </option>  
+                      <option cl    ass=" " value="6 ">
+                      <div cla      ss=" ">Charles YS Wong</div>
+                         </option> 
+                       <optio   n class=" " value="4 ">
+                            <div class=" ">Daniel Lai</div>
+                          </option>
+                          <option class=" " value="38 ">
+                            <div class=" ">Dennis Kam</div>
+                          </option>
+                  <option class=" " value="18 ">
+                            <div class=" ">Eddy Wong</div>
+                          </option>
+                          <option class=" " value="25 ">
+                            <div class=" ">Emily Chan</div>
+                  </option>
+                          <option class=" " value="5 ">
+                            <div class=" ">Eric Cheng</div>
+                          </option>
+                          <option class=" " value="9 ">
+                            <div class=" ">Flora Hui</div>
+                  </option>
+                  <option class=" " value="3 ">
+                    <div class=" ">Irene Ko</div>
+                        </option>
+                          <option class=" " value="41 ">
+                              <div class=" ">Janis Lee</div>
+                          </option>
+                          <option class=" " value="2 ">                 <div class=" ">John Stewart</div>
+                        </option>
+                  <option class=" " value="12 ">
+                          <div class=" ">John Yuen</div>
+                        </option>
+                          <option class=" " value="27 ">
+                          <div class=" ">Karen Kwong</div>
+                        </option>
+                      <option class=" " value="10 ">
+                        <div class=" ">Karl Manuel</div>
+                  </option>
+                      <option class=" " value="17 ">
+                        <div class=" ">Keith Chan</div>
+                      </option>
+                      <option class=" " value="32 ">
+                        <div class=" ">Ken Ho</div>
+                      </option>
+                      <option class=" " value="36 ">
+                        <div class=" ">Ken Tam</div>
+                      </option>
+                      <option class=" " value="34 ">
+                        <div class=" ">Kenneth Tam</div>
+                      </option>
+                      <option class=" " value="19 ">
+                        <div class=" ">Kiori Tong</div>
+                  </option>
+                      <option class=" " value="33 ">
+                        <div class=" ">Lily Mak</div>
+                      </option>
+                      <option class=" " value="37 ">
+                        <div class=" ">Luther Putu</div>
+                      </option>
+                   <option class=" " value="22 ">
+                    <div class=" ">Martin Kwan</div>
+                  </option>
+              <option class=" " value="21 ">
+                    <div class=" ">Michael Li</div>
+                  </option>
+                  <option class=" " value="8 ">
+                    <div class=" ">Morris Chan</div>
+
+                      <option class=" " value="26 ">
+                    <div class=" ">Petra Pronay</div>
+                      </option>
+                      <option class=" " value="35 ">
+                        <div class=" ">Polly Chan</div>
+                  </option>
+                      <option class=" " value="30 ">
+                        <div class=" ">Ralph Wong </div>
+                  </option>
+                      <option class=" " value="15 ">
+                        <div class=" ">Ricky Hung</div>
+                      </option>
+                      <option class=" " value="13 ">
+                    <div class=" ">Roy Mok</div>
+                      </option>
+                      <option class=" " value="14 ">
+                        <div class=" ">Sam Ho</div>
+                      </option>
+                      <option class=" " value="16 ">
+                        <div class=" ">Sophia Wong</div>
+                  </option>
+                      <option class=" " value="7 ">
+                    </option>
+                    <option class=" " value="28 ">
+                      <div class=" ">Stephen Leung </div>
+                    </option>
+                  <option class=" " value="1 ">
+                            <div class=" ">tat</div>
+
+                      <option class=" " value="11 ">
+                        <div class=" ">Thomas Tang</div>
+                        </option>
+                      <option class=" " value="20 ">
+                     <div class=" ">Tiffany Yeung</div> 
+                        </option>
+                      <option class=" " value="39 ">
+                    <div class=" ">Tricia Ng</div>
+                      </option>
+              <option class=" " value="40 ">
+                 <div class=" ">Yam Pang</div>
+                       </option>
+                     </select>
+                  </div>
+                </div>
+     
+    
+
+            <tab},le id="example2 " class="table table-bordered table-hover ">
+            <   thead>  
+
+
+
+                }        <th>RFQ Desc</th>
+             );     <th width="100 ">Entry Date</th>
+                  <th width="100 ">Expiry Date</th>
+                      <th width="200 ">Status</th>
+                      <th>Action</th>
+    
+                </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>RFQ#</th>
+                      <th>RFQ Desc</th>
+                      <th>Entry Date</th>
+                      <th>Expiry Date</th>
+                      <th>School</th>
+                      <th>Email</th>
+                      <th>Initiator</th>
+                      <t
+                    h>Status</t
+                h>
+                      <th>Action</th>
+                    </tr>
+              </    tfoot>
+            </table>    
+          </div>    
+          <!-- /.car    d-body -->
+          <div class    ="card-footer ">
+
+ }
+          </div>,
+          <!    v>
+        <!-- /.card -->
+    
+                        
+                       
+                       
+                     {
+              </section>
+                       
+                       
+                     {
+              <!-- /.conent -->
+                       
+                       
+                     {
+            </div>
+                       
+                       
+                     {
+            <div id="theodalSet "></div>
+                       
+                       
+                     {
+          <!-- /.conte  t-wrapper -->
+                       
+                       
+                       
+                       
+                     {
+        
+                       
+                       
+                     {
+        
+                       
+                       
+                    
+
+        <footer class
+                        ="main-footer ">
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                    
+          <div class="float-right d-none d-sm-block ">
+          <b>V  ersion</b> 1.0
+                      </div>
+          <strong>Copyright &copy; 202 <a href="/ " class="esf-red ">English Schools Foundation</a>.</strong> All rights
+         reserved. 
+      </footer>  
+    
+       <!-- Control Sid ebar -->
+      <aside class="co ntrol-sidebar control-sidebar-dark ">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>    
+    <!-- ./wrapper   -->
+    
+  <!-- jQuery -->    
+    <script src="https ://esf-fdd-dev.vela.hk/plugins/jquery/jquery.min.js "></script>
+  <!-- Bootstrap 4 -    ->
+  <script src="https://esf-fdd-dev.vela.hk/plugins/bootsrap/js/bootstrap.bundle.min.js "></script>
+  <!-- ChartJS -->
+  <script src="https://esf-fdd-dev.vela.hk/plugins/chart.js/Chart.min.js "></script>
+      <!-- Select2 -->
+  <script src="https://esf-fdd-dev.vela.hk/plugins/select2/js/select2.full.min.js "></script>
+   <!-- DataTable   s -->
+     <script src="https ://esf-fdd-dev.vela.hk/plugins/datatables/jquery.dataTables.min.js "></script>
+    <script src="https ://esf-fdd-dev.vela.hk/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js "></script>
+   <script src="https ://esf-fdd-dev.vela.hk/plugins/datatables-responsive/js/dataTables.responsive.min.js "></script>
+     <script src="https ://esf-fdd-dev.vela.hk/plugins/datatables-responsive/js/responsive.bootstrap4.min.js "></script>
+  <script src="https://esf-fdd-dev.vela.hk/plugins/sortig/natural.js "></script>
+
+  <script src="https://esf-fdd-dev.vela.hk/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js "></script>
+      <script src="https://esf-fdd-dev.vela.hk/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.min.js "
+    charset="UTF -8 "></script>
+    <script src="https ://esf-fdd-dev.vela.hk/plugins/daterangepicker/daterangepicker.js "></script>
+      <script src="https://esf-fdd-dev.vela.hk/plugins/moment/moment.min.js "></script>
+  <!-- Tempusdominus     Bootstrap 4 -->
+     <script src="https ://esf-fdd-dev.vela.hk/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js ">
+  </script>
+  <script src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/plugins/piexif.js "
+    type="text/javascript "></script>
+      <script src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/plugins/sortable.js "
+    type="te xt/javascript "></script>
+  <scrip    t src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/fileinput.js " type="text/javascript ">
+  </scri    pt>
+    
+      <script src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/locales/es.js "
+        type="text/javascript "></script>
+  <script src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/themes/fas/theme.js "
+        type="text/javascript "></script>
+
+  <s    cript src="https://esf-fdd-dev.vela. hk/plugins/kartik-v-bootstrap-fileinput/themes/explorer-fas/theme.js "
+    type    ="text/java s cript "></script>
+  <scrip    t src="https://esf-fdd-dev.vela.hk/plugins/bootstrap-switch/js/bootstrap-switch.min.js " type="text/javascript ">
+pt>
+
+  </head>
+
+
+-- f  <link rel="stylesheet " href="https://esf-fdd-dev.vela.hk/css/bootstrap-multiselect.css ">
+      <script type="text/javascript " src="https://esf-fdd-dev.vela.hk/js/bootstrap-multiselect.js "></script>
+     
+      <link rel="sty lesheet " href="https://esf-fdd-dev.vela.hk/css/bootstrap4-toggle.min.css ">
+    <script ty  pe="text/javascript " src="https://esf-fdd-dev.vela.hk/js/bootstrap4-toggle.min.js "></script>
+    
+  <link rel=    "styl esheet " href="https://esf-fdd-dev.vela.hk/css/workorder.css ">
+
+  <script type=" <stext/javas cript " src="https://esf-fdd-dev.vela.hk/js/rfq.js "></script>
+
+  <script type="},text/javascript " src="https://esf-fdd-dev.vela.hk/js/font-awesome-all.js "></script>
+     
+  <!-- AdminLTE     App -->
+  <script src="https://esf-fdd-dev.vela.hk/dist/js/adminlte.min.js "></script>
+
+
+for demo purposes -->
+pt s  <script type="text/javascript " src="https://esf-fdd-dev.vela.hk/js/accounting.js "></script>
+    
+      <script>
+        $('.datepicker*').datepicker({
+          forma
+
+t: 'yyyy-mm-dd',
+      language: "zh-TW "
+        $('.select2*').select2();
+    
+        //Timepicker
+    $('
+#timepicker').datetimepicker({
+      f      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    });
+
+    $('#email_alert_btn').click(function (e) {
+
+      $.ajax({
+        type: "GET ",
+        url: 'https://esf-fdd-dev.vela.hk/user/update_email_alert',
+        dataType: "html ",
+        async: false,
+        data: {
+          is_email_alert: $("#email_alert_btn ").prop('checked')
+
+        },
+        success: function (data) {
+
+
+
+        }
+      });
+    });
+  </script>
+  <script>
+    $(function () {
+
+      oTable = $('#example2').DataTable({
+        "paging ": true,
+        "lengthChange ": false,
+        "searching ": true,
+        "ordering ": true,
+        "info ": true,
+        "autoWidth ": false,
+        "responsive ": true,
+        serverSide: true,
+        processing: true,
+        order: [
+          [0, 'desx']
+        ],
+        ajax: {
+          url: 'https://esf-fdd-dev.vela.hk/rfq/listing/Data',
+          data: function (d) {
+            d.s_department_id = $('select[name=s_department_id]').val();
+            d.s_rfq_approval_status = $('select[name=s_rfq_approval_status]').val();
+            d.s_auth = $('select[name=s_auth]').val();
+            d.s_user_id = $('select[name=s_user_id]').val();
+
+          }
+        },
+        "columns ": [
+
+          {
+            data: 'rfq_no',
+            name: 'rfq.rfq_no',
+            title: 'RFQ#'
+          },
+          {
+            data: 'work_description',
+            name: 'rfq.work_description',
+            title: 'RFQ Desc'
+          },
+          {
+            data: 'entry_date',
+            name: 'rfq.entry_date',
+            title: 'Entry Date'
+          },
+          {
+            data: 'application_deadline',
+            name: 'rfq.application_deadline',
+            title: 'Expiry Date'
+          },
+          {
+            data: 'location_unit_name',
+            name: 'rfq_location_unit_2.location_unit_name',
+            title: 'School'
+          },
+          {
+            data: 'email_attachment',
+            name: '',
+            title: 'Email',
+            "orderable ": false,
+            "searchable ": false
+          },
+          {
+            data: 'create_user_name',
+            name: 'users.name',
+            title: 'Initiator'
+          },
+          {
+            data: 'rfq_approval_status',
+            name: 'rfq_action.rfq_approval_status',
+            title: 'Status'
+          },
+
+          {
+            "defaultContent ": " ",
+            "data ": "action ",
+            "name ": "action ",
+            "title ": "Action ",
+            "render ": null,
+            "orderable ": false,
+            "searchable ": false,
+            "width ": "200px "
+          }
+        ],
+        "dom ": "B< 'datatable_top_i'i>frtip", // buttons:["csv","excel","pdf","print"], initComplete: function () { this.api().columns([0]).every(function () { var column = this; var input = document.createElement("input"); var
+                    title = $(column.header()).html(); $(input).css("width", "50").appendTo($(column.footer()).empty()) .on('change keyup', function () { column.search($(this).val(), false, false, true).draw(); }).attr("placeholder", title); }); this.api().columns([0]).every(function
+                    () { var column = this; var input = document.createElement("input"); var title = $(column.header()).html(); $(input).css("width", "50").appendTo($(column.header()).empty()) .on('change keyup', function () { column.search($(this).val(),
+                    false, false, true).draw(); }).attr("placeholder", title); }); this.api().columns([1, 2, 3, 4]).every(function () { var column = this; var input = document.createElement("input"); var title = $(column.header()).html(); $(input).css("width",
+                    "100%").appendTo($(column.footer()).empty()) .on('change keyup', function () { column.search($(this).val(), false, false, true).draw(); }).attr("placeholder", title); }); this.api().columns([1, 2, 3, 4]).every(function () { var column
+                    = this; var input = document.createElement("input"); var title = $(column.header()).html(); $(input).css("width", "100%").appendTo($(column.header()).empty()) .on('change keyup', function () { column.search($(this).val(), false, false,
+                    true).draw(); }).attr("placeholder", title); }); } }); $("#s_rfq_approval_status, #s_auth, #s_department_id, #s_user_id").change(function (e) { oTable.draw(); e.preventDefault(); }); }); function setEmailAttachModal(obj_id) { obj =
+                    $("#" + obj_id); var target_id = "null"; var input_id = obj.attr('id'); var input_id_data = input_id.split("_"); target_id = input_id_data.pop(); var url = obj.data('href'); $.ajax({ type: "GET", url: url, dataType: "html", async:
+                    false, data: { target_id: target_id, }, success: function (data) { $('#theModalSet').html(data); $('#viewEmailAttachModal').modal({ keyboard: false }); } }); $('.select2').select2(); }
+                    </script>
+</body>
+
+</html>
