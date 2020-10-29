@@ -36,6 +36,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
 </head>
+<style>
+    .esfBtn {
+        color: #fefefe;
+        background-color: #3a87ad;
+        border-color: #3a87ad;
+        padding: 8px 50px 8px 50px
+    }
+    
+    .esfBtn:hover {
+        background-color: #276f92;
+        border-color: #276f92;
+        color: #fefefe
+    }
+    
+    .esfBtn:active {
+        background-color: #276f92;
+        border-color: #276f92;
+        color: #fefefe
+    }
+    
+    .esfBtn:focus {
+        background-color: #276f92;
+        border-color: #276f92;
+        color: #fefefe
+    }
+    
+    .esfBtn-outline {
+        color: #7d002f;
+        background-color: #ffffff;
+        border-color: #7d002f;
+        padding: 8px 50px 8px 50px
+    }
+    
+    .esfBtn-outline:hover {
+        background-color: #300010;
+        border-color: #300010;
+        color: #ffffff;
+    }
+    
+    .esfBtn-outline:active {
+        background-color: #300010;
+        border-color: #300010;
+        color: #ffffff;
+    }
+    
+    .esfBtn-outline:focus {
+        background-color: #300010;
+        border-color: #300010;
+        color: #ffffff;
+    }
+</style>
 
 <body>
     <!-- header -->
@@ -60,513 +111,64 @@
                 <div class="row text-dark">
                     <div class="col-sm-12">
                         <!-- form start -->
-                        <form class=" ">
+                        <form>
                             <div class="form-group row">
-                                <label class="col-sm-4 col-form-label font-weight-bold">A.I.P. No</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input class="form-control item-content" id="aip_no" name="" placeholder="AIP No" value="-- Auto --" readonly="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label font-weight-bold">Date</label>
-                                <div class="col-sm-8 mt-2">
-                                    <!-- <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy"> -->
-                                    <input class="form-control item-content" value="2020/10/28" readonly="">
-                                </div>
-                            </div>
-                            <!-- a -->
-                            <div class="col-12 mt-4 mb-2 row">
-                                <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">PROJECT PARTICULARS
-                                </h5>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label font-weight-bold">Project</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input type="text" class="form-control item-content" id="aip_project" name="" placeholder="AIP Project" value="Island School Redevelopment" readonly="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label font-weight-bold">Contract</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input type="text" class="form-control item-content" id="aip_contract" name="" placeholder="AIP Contract" value="Main Contract" readonly="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="aip_sub_contract" class="col-sm-4 col-form-label font-weight-bold">
-																	Related Sub-Contract(s)</label>
-                                <div class="col-sm-8 mt-2">
-                                    <select class="form-control" id="aip_sub_contract" placeholder="AIP Sub-Contract">
-																			<option>1</option>
-																			<option>2</option>
-																			<option>3</option>
-																		</select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label font-weight-bold">Employer</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input type="text" class="form-control item-content" id="aip_employer" name="" placeholder="AIP Employer" value="English Schools Fundation" readonly="">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label font-weight-bold">Contractor</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input type="text" class="form-control item-content" id="aip_contractor" name="" placeholder="AIP Contractor" value="Build King Construction Limited" readonly="">
-                                </div>
-                            </div>
-                            <!-- b -->
-                            <div class="col-12 mt-4 mb-2 row">
-                                <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">PROPOSED ARCHITECT’S INSTRUCTIONS
-                                </h5>
-                            </div>
-                            <div class="form-group">
-                                <label for="aip_description">Description</label>
-                                <textarea class="form-control" id="aip_description" rows="3"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="aip_document">Documents / Drawings</label>
-                                <textarea class="form-control" id="aip_document" rows="2"></textarea>
-                                <input type="file" class="form-control-file mt-2">
-                            </div>
-                            <div class="form-group row">
-                                <label for="aip_works_discipline" class="col-sm-12 col-form-label font-weight-bold">
-																	Works discipline <span class="text-danger">(Please check as appropriate)</span>
-																</label>
-                                <div class="col-sm-12 mt-2">
-                                    <select class="form-control" id="aip_works_discipline" placeholder="AIP Sub-Contract">
-																			<option>Project-wise</option>
-																			<option>Adv. Work</option>
-																			<option>Civil & Str.</option>
-																			<option>ABWF</option>
-																			<option>M & E</option>
-																			<option>FF&E</option>
-																			<option>External</option>
-																			<option>Others</option>
-																		</select>
-                                </div>
-                                <!-- <label class="col-sm-12 col-form-label font-weight-bold">Works discipline <span class="text-danger">(Please check as appropriate)</span></label>
-                                <div class="col-sm-12">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox1" value="option1">
-                                        <label class="form-check-label" for="work_discipline_checkbox1">Project-wise</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox2" value="option2">
-                                        <label class="form-check-label" for="work_discipline_checkbox2">Adv. Work</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox3" value="option2">
-                                        <label class="form-check-label" for="work_discipline_checkbox3">Civil & Str.</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox4" value="option2">
-                                        <label class="form-check-label" for="work_discipline_checkbox4">ABWF</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox5" value="option2">
-                                        <label class="form-check-label" for="work_discipline_checkbox5">M & E</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox6" value="option2">
-                                        <label class="form-check-label" for="work_discipline_checkbox6">FF&E</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox7" value="option2">
-                                        <label class="form-check-label" for="work_discipline_checkbox7">External</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox8" value="option2">
-                                        <label class="form-check-label" for="work_discipline_checkbox8">Others:
-																				</label>
-                                        <input type="text" for="work_discipline_checkbox8" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
-                                    </div>
-                                </div> -->
-                            </div>
-                            <div class="form-group row">
-                                <legend class="col-sm-12 col-form-label font-weight-bold">Abortive works involved <span class="text-danger"> (If YES, please estimate extent)</span></legend>
+                                <legend class="col-sm-12 col-form-label font-weight-bold">Abortive works involved
+                                </legend>
                                 <div class="col-sm-10">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="works_involved_radios" id="works_involved_radios1" value="option1" checked>
                                         <label class="form-check-label" for="works_involved_radios1">
-																					NO
-																				</label>
+                                    NO
+                                  </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="works_involved_radios" id="works_involved_radios2" value="option2">
                                         <label class="form-check-label" for="works_involved_radios2">
-																					YES
-																				</label>
-                                        <input type="text" for="works_involved_radios2" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
+                                    YES
+                                  </label>
 
-                                    </div>
-                                </div>
-
-
-
-
-                            </div>
-                            <!-- c -->
-                            <div class="col-12 mt-4 mb-2 row">
-                                <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">EXPECTED APPROVAL DATE
-                                </h5>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-4 col-form-label font-weight-bold">Date</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy">
-                                </div>
-                            </div>
-                            <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                <label class="custom-control-label" for="customControlInline">Urgent</label>
-                                <p class="mt-2 text-muted" style="font-size: 14px; font-weight:500;">(This aprroval process is on critical path casuing delay in addition to the time implication shown in
-                                    <span class="text-danger">COST AND TIME IMPLICATION</span> below)</p>
-                            </div>
-                            <!-- d -->
-                            <div class="col-12 mt-4 mb-2 row">
-                                <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">COST AND TIME IMPLICATIONS
-                                </h5>
-                            </div>
-                            <div class="form-group row col-12">
-                                <label class="col-form-label font-weight-bold mr-2">Estimated time</label>
-                                <div class="col-sm-3 d-flex">
-                                    <select class="form-control mr-2 mb-2" placeholder="Estimated time">
-																			<option>saved</option>
-																			<option>prolonged</option>
-																		</select>
-                                    <span class="mt-2">By</span>
-                                </div>
-                                <div class="col-sm-3 number-input d-flex">
-                                    <input class="form-control quantity mr-2 mb-2" min="0" name="quantity" value="0" type="number">
-                                    <span class="mt-2">day(s)</span>
-                                </div>
-                            </div>
-                            <div class="form-group row col-12">
-                                <label class="col-form-label font-weight-bold mr-2">Initial cost estimated</label>
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2" min="0" name="quantity" value="0" type="number">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-12 col-form-label font-weight-bold">Justification <span class="text-danger">(Please check as appropriate)</span></label>
-                                <div class="col-sm-12 col-form-label">The above is the requirement of:</div>
-                                <div class="col-sm-12">
-                                    <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox1" value="option1">
-                                        <label class="form-check-label" for="justification_checkbox1">Design Change - Consultant</label>
-                                    </div>
-                                    <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox2" value="option2">
-                                        <label class="form-check-label" for="justification_checkbox2">Contractual Procedures</label>
-                                    </div>
-                                    <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox3" value="option2">
-                                        <label class="form-check-label" for="justification_checkbox3">Design Change - ESF</label>
-                                    </div>
-                                    <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox4" value="option2">
-                                        <label class="form-check-label" for="justification_checkbox4">Re-measurement</label>
-                                    </div>
-                                    <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox5" value="option2">
-                                        <label class="form-check-label" for="justification_checkbox5">Design Change - School</label>
-                                    </div>
-                                    <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox6" value="option2">
-                                        <label class="form-check-label" for="justification_checkbox6">Claims</label>
-                                    </div>
-                                    <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox7" value="option2">
-                                        <label class="form-check-label" for="justification_checkbox7">Design Change -</label>
-                                        <input type="text" for="justification_checkbox7" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
-                                    </div>
-                                    <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox8" value="option2">
-                                        <label class="form-check-label" for="justification_checkbox8">Others:
-																																																</label>
-                                        <input type="text" for="justification_checkbox8" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="mb-2" for="aip_justificatio">and is considered necessary for reasons :</div>
-                                <textarea class="form-control" id="aip_justificatio" rows="2"></textarea>
+                                <label for="aip_works_involved" style="font-weight: 400;">Description</label>
+                                <textarea class="form-control" id="aip_works_involved" rows="3"></textarea>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-form-label font-weight-bold">Estimated Cost Implication <span class="text-danger">
-																(Assessment by Cost Consultant)
-															</span></div>
-                            </div>
+                            <!-- 2 -->
+                            <div class="form-group row">
+                                <legend class="col-sm-12 col-form-label font-weight-bold">Builder’s Works involved
+                                </legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="works_builder_radios" id="works_builder_radios1" value="option1" checked>
+                                        <label class="form-check-label" for="works_builder_radios1">
+                                    NO
+                                  </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="works_builder_radios" id="works_builder_radios2" value="option2">
+                                        <label class="form-check-label" for="works_builder_radios2">
+                                    YES
+                                  </label>
 
-                            <!-- <div class="form-group row col-12">
-                                <label class="col-form-label font-weight-normal mr-2">Preliminaries</label>
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2 costConsultant" min="0" value="0" type="number">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group row col-12">
-                                <label class="col-form-label font-weight-normal mr-2">Advance Works</label>
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2 costConsultant" min="0" value="0" type="number">
-                                </div>
-                            </div>
-                            <div class="form-group row col-12">
-                                <label class="col-form-label font-weight-normal mr-2">Ground Works</label>
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2 costConsultant" min="0" value="0" type="number">
-                                </div>
-                            </div>
-                            <div class="form-group row col-12">
-                                <label class="col-form-label font-weight-normal mr-2">Builder’s Works</label>
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2 costConsultant" min="0" value="0" type="number">
-                                </div>
-                            </div>
-                            <div class="form-group row col-12">
-                                <label class="col-form-label font-weight-normal mr-2">Building Services</label>
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2 costConsultant" min="0" value="0" type="number">
-                                </div>
-                            </div>
-                            <div class="form-group row col-12">
-                                <label class="col-form-label font-weight-normal mr-2">Specialist System</label>
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2 costConsultant" min="0" value="0" type="number">
-                                </div>
-                            </div>
-
-                            <div class="form-group d-flex col-12 row">
-                                <input class="form-control col-sm-3 mb-2" type="text" for="justification_checkbox7" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2 costConsultant" min="0" value="0" type="number">
-                                </div>
-                            </div>
-                            <div class="form-group d-flex col-12 row">
-                                <input class="form-control col-sm-3 mb-2" type="text" for="justification_checkbox7" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2 costConsultant" min="0" value="0" type="number">
-                                </div>
-                            </div>
-                            <div class="form-group d-flex col-12 row">
-                                <input class="form-control col-sm-3 mb-2" type="text" for="justification_checkbox7" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2 costConsultant" min="0" value="0" type="number">
-                                </div>
-                            </div>
-                            <div class="form-group row col-12">
-                                <label class="col-form-label font-weight-normal mr-2">Abortive Works/Materials</label>
-                                <div class="col-sm-3 number-input d-flex">
-                                    <span class="mt-2 mr-2">$ </span>
-                                    <input class="form-control quantity mr-2 mb-2 price" min="0" value="0" type="number">
-                                </div>
-                            </div>
-                            <hr> -->
-
-                            <table id="tab">
-                                <tr class="row">
-                                    <td class="d-flex col-sm-12 mb-4 justify-content-between">
-                                        <span class="col-sm-6 mt-2">Preliminaries</span>
-                                        <span class="mt-2">$ </span>
-                                        <div class="col-sm-6 d-flex">
-                                            <input class="min form-control col-sm-2" name="" type="button" value="-" />
-                                            <input class="form-control col-sm-8  text_box price" name="" type="text" value="0" />
-                                            <input class="add form-control col-sm-2" name="" type="button" value="+" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row">
-                                    <td class="d-flex col-sm-12 mb-4 justify-content-between">
-                                        <span class="col-sm-6 mt-2">Advance Works</span>
-                                        <span class="mt-2">$ </span>
-                                        <div class="col-sm-6 d-flex">
-                                            <input class="min form-control col-sm-2" name="" type="button" value="-" />
-                                            <input class="form-control col-sm-8  text_box price" name="" type="text" value="0" />
-                                            <input class="add form-control col-sm-2" name="" type="button" value="+" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row">
-                                    <td class="d-flex col-sm-12 mb-4 justify-content-between">
-                                        <span class="col-sm-6 mt-2">Ground Works</span>
-                                        <span class="mt-2">$ </span>
-                                        <div class="col-sm-6 d-flex">
-                                            <input class="min form-control col-sm-2" name="" type="button" value="-" />
-                                            <input class="form-control col-sm-8  text_box price" name="" type="text" value="0" />
-                                            <input class="add form-control col-sm-2" name="" type="button" value="+" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row">
-                                    <td class="d-flex col-sm-12 mb-4 justify-content-between">
-                                        <span class="col-sm-6 mt-2">Builder’s Works</span>
-                                        <span class="mt-2">$ </span>
-                                        <div class="col-sm-6 d-flex">
-                                            <input class="min form-control col-sm-2" name="" type="button" value="-" />
-                                            <input class="form-control col-sm-8  text_box price" name="" type="text" value="0" />
-                                            <input class="add form-control col-sm-2" name="" type="button" value="+" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row">
-                                    <td class="d-flex col-sm-12 mb-4 justify-content-between">
-                                        <span class="col-sm-6 mt-2">Building Services</span>
-                                        <span class="mt-2">$ </span>
-                                        <div class="col-sm-6 d-flex">
-                                            <input class="min form-control col-sm-2" name="" type="button" value="-" />
-                                            <input class="form-control col-sm-8  text_box price" name="" type="text" value="0" />
-                                            <input class="add form-control col-sm-2" name="" type="button" value="+" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row">
-                                    <td class="d-flex col-sm-12 mb-4 justify-content-between">
-                                        <span class="col-sm-6 mt-2">Specialist System</span>
-                                        <span class="mt-2">$ </span>
-                                        <div class="col-sm-6 d-flex">
-                                            <input class="min form-control col-sm-2" name="" type="button" value="-" />
-                                            <input class="form-control col-sm-8  text_box price" name="" type="text" value="0" />
-                                            <input class="add form-control col-sm-2" name="" type="button" value="+" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row">
-                                    <td class="d-flex col-sm-12 mb-2 justify-content-between">
-                                        <div class="col-sm-6 mt-2 d-flex justify-content-between">
-                                            <input class="form-control mb-2" type="text" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
-                                            <span class="pl-4">$ </span>
-                                        </div>
-
-                                        <div class="col-sm-6 d-flex">
-                                            <input class="min form-control col-sm-2" name="" type="button" value="-" />
-                                            <input class="form-control col-sm-8  text_box price" name="" type="text" value="0" />
-                                            <input class="add form-control col-sm-2" name="" type="button" value="+" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row">
-                                    <td class="d-flex col-sm-12 mb-2 justify-content-between">
-                                        <div class="col-sm-6 mt-2 d-flex">
-                                            <input class="form-control mb-2" type="text" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
-                                            <span class="pl-4">$ </span>
-                                        </div>
-
-                                        <div class="col-sm-6 d-flex">
-                                            <input class="min form-control col-sm-2" name="" type="button" value="-" />
-                                            <input class="form-control col-sm-8  text_box price" name="" type="text" value="0" />
-                                            <input class="add form-control col-sm-2" name="" type="button" value="+" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row">
-                                    <td class="d-flex col-sm-12 mb-2 justify-content-between">
-                                        <div class="col-sm-6 mt-2 d-flex">
-                                            <input class="form-control mb-2" type="text" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
-                                            <span class="pl-4">$ </span>
-                                        </div>
-
-                                        <div class="col-sm-6 d-flex">
-                                            <input class="min form-control col-sm-2" name="" type="button" value="-" />
-                                            <input class="form-control col-sm-8  text_box price" name="" type="text" value="0" />
-                                            <input class="add form-control col-sm-2" name="" type="button" value="+" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="row">
-                                    <td class="d-flex col-sm-12 mb-2 justify-content-between">
-                                        <span class="col-sm-6 mt-2">Abortive Works/Materials</span>
-                                        <span class="mt-2">$ </span>
-                                        <div class="col-sm-6 d-flex">
-                                            <input class="min form-control col-sm-2" name="" type="button" value="-" />
-                                            <input class="form-control col-sm-8  text_box price" name="" type="text" value="0" />
-                                            <input class="add form-control col-sm-2" name="" type="button" value="+" />
-                                        </div>
-                                    </td>
-                                </tr>
-
-                            </table>
-                            <hr>
-                            <p class="text-danger">Total: $ <label id="total"></label></p>
-                            <!-- e -->
-                            <div class="col-12 mt-4 mb-2 row">
-                                <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">TECHNICAL TEAM
-                                </h5>
                             </div>
                             <div class="form-group">
-                                <label for="aip_proposed">Proposed by</label>
-                                <textarea class="form-control" id="aip_proposed" rows="1"></textarea>
+                                <label for="aip_works_builder" style="font-weight: 400;">Description</label>
+                                <textarea class="form-control" id="aip_works_builder" rows="3"></textarea>
                             </div>
-                            <div class="form-group row mb-4">
-                                <div class="col-sm-12 font-weight-bold">Consultant</div>
-                                <label class="col-sm-4 col-form-label">Date</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy">
-                                </div>
-                            </div>
-                            <hr>
+                            <!-- 3 -->
                             <div class="form-group mt-4">
-                                <label for="aip_recommended">Recommended by</label>
-                                <textarea class="form-control" id="aip_recommended" rows="1"></textarea>
+                                <label for="aip_technical">Technical endorsement or Rejection</label>
+                                <textarea class="form-control" id="aip_technical" rows="3"></textarea>
                             </div>
-                            <div class="form-group row">
-                                <div class="col-sm-12 font-weight-bold">Lead Architect</div>
-                                <label class="col-sm-4 col-form-label">Date</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy">
-                                </div>
-                            </div>
-                            <!-- f -->
-                            <div class="col-12 mt-4 mb-2 row">
-                                <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">
-                                    COST ASSESSMENT TEAM
-                                </h5>
-                            </div>
-                            <div class="form-group">
-                                <label for="aip_prepared">Prepared and Recommended by</label>
-                                <textarea class="form-control" id="aip_prepared" rows="1"></textarea>
-                            </div>
-                            <div class="form-group row mb-4">
-                                <div class="col-sm-12 font-weight-bold">Q.S.</div>
-                                <label class="col-sm-4 col-form-label">Date</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy">
-                                </div>
-                            </div>
-                            <!-- f -->
-                            <div class="col-12 mt-4 mb-2 row">
-                                <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">
-                                    CLIENT’S TEAM
-                                </h5>
-                            </div>
-                            <div class="form-group row mb-4">
-                                <div class="col-sm-12 mb-2 font-weight-bold">Reviewed by ESF-FDD</div>
-                                <div class="col-sm-12">Thomas Tang / Marco Hsu / Kiori Tong</div>
-                                <label class="col-sm-4 col-form-label">Date</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy">
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="form-group row">
-                                <div class="col-sm-12 mb-2 font-weight-bold">Approved by ESF</div>
-                                <div class="col-sm-12 ">John Stewart / Vivian Cheung</div>
-                                <label class="col-sm-4 col-form-label">Date</label>
-                                <div class="col-sm-8 mt-2">
-                                    <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy">
-                                </div>
-                            </div>
-                            <div class="row text-center">
+                            <!-- btn -->
+                            <div class="row text-center ">
                                 <div class="col-sm-12">
-                                    <button type="submit" class="btn btn-primary" id="AIPconfirm" value="AIPconfirm">Submit</button>
+                                    <button type="submit" class="btn esfBtn-outline" value="Reject">Reject</button>
+                                    <button type="submit" class="btn esfBtn" value="Endorsed">Endorsed</button>
                                 </div>
                             </div>
                         </form>
@@ -660,35 +262,6 @@
             }
             setTotal();
         })
-    </script>
-    <script>
-        window.onload = function() {
-            var RFQconfirm = document.getElementById("RFQconfirm ");
-            RFQconfirm.onclick = function() {
-                if (confirm("Are you sure you want to send this form? ")) {
-                    alert("Thanks for your submit! ");
-                } else {
-                    //alert(" ");
-                }
-            }
-        };
-        $('input[type="radio "]').click(function() {
-            if ($(this).attr("value ") == "Decline ") {
-                $(".Box ").hide('fast');
-                $(".Box ").addClass('hideBox');
-            }
-            if ($(this).attr("value ") == "Yes ") {
-                $(".Box ").show('slow');
-
-            }
-        });
-        $('input[type="radio "]').trigger('click');
-        $('#file-upload').on('change', function() {
-            //get the file name
-            var fileName = $(this).val();
-            //replace the "Choose a file " label
-            $(this).next('.custom-file-label').html(fileName);
-        });
     </script>
 </body>
 

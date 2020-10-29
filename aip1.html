@@ -36,6 +36,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
 </head>
+<style>
+    .esfBtn {
+        color: #fefefe;
+        background-color: #3a87ad;
+        border-color: #3a87ad;
+        padding: 8px 50px 8px 50px
+    }
+    
+    .esfBtn:hover {
+        background-color: #276f92;
+        border-color: #276f92;
+        color: #fefefe
+    }
+    
+    .esfBtn:active {
+        background-color: #276f92;
+        border-color: #276f92;
+        color: #fefefe
+    }
+    
+    .esfBtn:focus {
+        background-color: #276f92;
+        border-color: #276f92;
+        color: #fefefe
+    }
+    
+    .esfBtn-outline {
+        color: #7d002f;
+        background-color: #ffffff;
+        border-color: #7d002f;
+        padding: 8px 50px 8px 50px
+    }
+    
+    .esfBtn-outline:hover {
+        background-color: #300010;
+        border-color: #300010;
+        color: #ffffff;
+    }
+    
+    .esfBtn-outline:active {
+        background-color: #300010;
+        border-color: #300010;
+        color: #ffffff;
+    }
+    
+    .esfBtn-outline:focus {
+        background-color: #300010;
+        border-color: #300010;
+        color: #ffffff;
+    }
+</style>
 
 <body>
     <!-- header -->
@@ -48,8 +99,7 @@
         </nav>
     </div>
     <!-- header -->
-
-    <!-- form start -->
+    <!-- all form start -->
     <div class="container col-12 col-sm-12 col-lg-8 mt-4 mb-4">
         <div class="card text-r-1-3-1">
             <div class="card-header mt-2" style="  border-bottom: 2px solid #3a87ad;">
@@ -566,7 +616,7 @@
                             </div>
                             <div class="row text-center">
                                 <div class="col-sm-12">
-                                    <button type="submit" class="btn btn-primary" id="AIPconfirm" value="AIPconfirm">Submit</button>
+                                    <button type="submit" class="btn esfBtn" id="AIPconfirm" value="AIPconfirm">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -578,12 +628,9 @@
                 <!-- AIP info -->
 
             </div>
-            <!-- /.card-body -->
-
-            <!-- /.card-footer-->
         </div>
     </div>
-    <!-- form end -->
+    <!-- all form end -->
 
 
     <!-- footer -->
@@ -659,12 +706,10 @@
                 $("#total").html(s.toFixed(2));
             }
             setTotal();
-        })
-    </script>
-    <script>
+        });
         window.onload = function() {
-            var RFQconfirm = document.getElementById("RFQconfirm ");
-            RFQconfirm.onclick = function() {
+            var AIPconfirm = document.getElementById("AIPconfirm");
+            AIPconfirm.onclick = function() {
                 if (confirm("Are you sure you want to send this form? ")) {
                     alert("Thanks for your submit! ");
                 } else {
@@ -672,23 +717,6 @@
                 }
             }
         };
-        $('input[type="radio "]').click(function() {
-            if ($(this).attr("value ") == "Decline ") {
-                $(".Box ").hide('fast');
-                $(".Box ").addClass('hideBox');
-            }
-            if ($(this).attr("value ") == "Yes ") {
-                $(".Box ").show('slow');
-
-            }
-        });
-        $('input[type="radio "]').trigger('click');
-        $('#file-upload').on('change', function() {
-            //get the file name
-            var fileName = $(this).val();
-            //replace the "Choose a file " label
-            $(this).next('.custom-file-label').html(fileName);
-        });
     </script>
 </body>
 
