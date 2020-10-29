@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie ie7 ltie8 ltie9" lang="en-US"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 ltie9" lang="en-US"><![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ESF-FDD</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="icYgNWFmJIO5sGRDymWBceweqorlgVPkQKAYitix">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="http://esf-ffd.vela.hk/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel=" stylesheet " href=" http://esf-ffd.vela.hk/plugins/select2/css/select2.min.css ">
+    <link rel=" stylesheet " href=" http://esf-ffd.vela.hk/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css ">
+
+
+    <!-- summernote -->
+    <link rel=" stylesheet " href=" http://esf-ffd.vela.hk/plugins/summernote/summernote-bs4.css ">
+
+    <!-- overlayScrollbars -->
+    <link rel=" stylesheet " href=" http://esf-ffd.vela.hk/dist/css/adminlte.min.css ">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link href=" https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700 " rel=" stylesheet ">
+    <!-- chris add -->
+    <link rel=" stylesheet " href=" ./dist/css/all.min.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+</head>
+<style>
+    .esfBtn {
+        color: #fefefe;
+        background-color: #3a87ad;
+        border-color: #3a87ad;
+        padding: 8px 50px 8px 50px
+    }
+    
+    .esfBtn:hover {
+        background-color: #276f92;
+        border-color: #276f92;
+        color: #fefefe
+    }
+    
+    .esfBtn:active {
+        background-color: #276f92;
+        border-color: #276f92;
+        color: #fefefe
+    }
+    
+    .esfBtn:focus {
+        background-color: #276f92;
+        border-color: #276f92;
+        color: #fefefe
+    }
+    
+    .esfBtn-outline {
+        color: #7d002f;
+        background-color: #ffffff;
+        border-color: #7d002f;
+        padding: 8px 50px 8px 50px
+    }
+    
+    .esfBtn-outline:hover {
+        background-color: #300010;
+        border-color: #300010;
+        color: #ffffff;
+    }
+    
+    .esfBtn-outline:active {
+        background-color: #300010;
+        border-color: #300010;
+        color: #ffffff;
+    }
+    
+    .esfBtn-outline:focus {
+        background-color: #300010;
+        border-color: #300010;
+        color: #ffffff;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <div class="navbar navbar-expand-lg navbar-light sticky-top header-bg" style="background-color: rgba(125, 0, 47, 1);">
+        <nav class="container" style="width: 100%;">
+            <a class="navbar-brand col-3" href="https://www.esf.edu.hk" target="_blank">
+                <!-- <img src="./assets/img/hks-logo.svg" alt=""> -->
+                <img style="width:250px;" src="https://www.esf.edu.hk/wp-content/uploads/2016/06/esf-logo-main-2.png" alt="">
+            </a>
+        </nav>
+    </div>
+    <!-- header -->
+
+    <!-- form start -->
+    <div class="container col-12 col-sm-12 col-lg-8 mt-4 mb-4">
+        <div class="card text-r-1-3-1">
+            <div class="card-header mt-2" style="  border-bottom: 2px solid #3a87ad;">
+                <h3 class="card-title text-r-5-3-5 text-center" style="float:none;">A.I. PRE-APPROVAL FORM</h3>
+            </div>
+            <div class="card-body">
+                <!-- AIP info -->
+                <div class="row text-dark">
+                    <div class="col-sm-12">
+                        <!-- form start -->
+                        <div class="form-group mb-4">
+                            <div class="col-sm-12 mb-2 font-weight-bold">Please fill out these forms:</div>
+                            <div class="col-sm-12">
+                                <ul>
+                                    <li>
+                                        <span style="color: #3a87ad;font-weight:400;">Project Particulars: </span> Related Sub-Contract(s)
+                                    </li>
+                                    <li>
+                                        <span style="color: #3a87ad;font-weight:400;">Proposed Architect’s Instructions: </span> Description, Documents / Drawings, Works discipline, Abortive works involved
+                                    </li>
+                                    <li><span style="color: #3a87ad;font-weight:400;">Expected Approval Date: </span> Date, Urgent
+                                    </li>
+                                    <li><span style="color: #3a87ad;font-weight:400;">Cost And Time Implications:</span> Estimated time, Initial cost estimated, Justification, Estimated Cost Implication</li>
+                                    <li><span style="color: #3a87ad;font-weight:400;">Technical Team: </span> Proposed by, Consultant Date, Recommended by, Lead Architect Date</li>
+                                    <li><span style="color: #3a87ad;font-weight:400;">Cost Assessment Team: </span> Prepared and Recommended by, Q.S. Date</li>
+                                    <li><span style="color: #3a87ad;font-weight:400;">Client’s Team: </span> Reviewed by ESF-FDD Date, Approved by ESF Date<span class="dashicons dashicons-testimonial"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="row text-center">
+                            <div class="col-sm-12">
+                                <!-- <button type="submit" class="btn esfBtn" id="AIPconfirm" value="AIPconfirm">Start</button> -->
+                                <a href="./aip1.html" class="btn esfBtn" id="AIPconfirm" value="AIPconfirm">Start</a>
+                            </div>
+                        </div>
+                        <!-- form end -->
+
+
+                    </div>
+                </div>
+                <!-- AIP info -->
+
+            </div>
+            <!-- /.card-body -->
+
+            <!-- /.card-footer-->
+        </div>
+    </div>
+    <!-- form end -->
+
+
+    <!-- footer -->
+    <footer class="text-r-1-3-1">
+        <div class="footer-wrapper">
+            <div class="container">
+                <div class="footer-wrapper p-4">
+                    <div class="row justify-content-between">
+                        <div>
+                            <p class="col-3 col-sm-12 footer-title">
+                                <a href="https://www.esf.edu.hk">
+                                    <img src="https://www.esf.edu.hk/wp-content/uploads/2016/06/esf-logo-main-2.png">
+                                </a>
+                            </p>
+                        </div>
+                        <div></div>
+                    </div>
+                    <!-- <h3 class="footer-title">ENGLISH SCHOOLS FOUNDATION<br><span class="footer-tchi">英基學校協會</span></h3> -->
+                    <div class="row justify-content-between">
+                        <div class="col-sm-12 col-lg-6">
+                            <p><a href="tel:+852 2574 2351">+ 852 2574 2351</a></p>
+                            <p><a href="mailto:info@esfcentre.edu.hk">info@esfcentre.edu.hk</a></p>
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <p class="text-lg-right">香港鰂魚涌 英皇道1063號25樓</p>
+                            <p class="text-lg-right">25/F 1063 King's Road Quarry Bay Hong Kong</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-wrapper">
+            <div class="container d-flex justify-content-lg-between flex-lg-row flex-md-column flex-sm-column footer-box text-r-0-1-0 pt-4 pb-2">
+                <p> © The English Schools Foundation - All rights reserved</p>
+                <p>
+                    <a href="https://www.esf.edu.hk/privacy/">Privacy Policy</a> |
+                    <a href="https://www.esf.edu.hk/disclaimer/">Disclaimer</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./dist/js/popper.min.js"></script>
+    <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js "></script>
+    <script>
+        $('.datepicker').datepicker();
+        //
+        $(function() {
+            $(".add").click(function() {
+                var t = $(this).parent().find('input[class*=text_box]');
+                t.val(parseInt(t.val()) + 1)
+                setTotal();
+            })
+            $(".min").click(function() {
+                var t = $(this).parent().find('input[class*=text_box]');
+                t.val(parseInt(t.val()) - 1)
+                if (parseInt(t.val()) < 0) {
+                    t.val(0);
+                }
+                setTotal();
+            })
+
+            function setTotal() {
+                var s = 0;
+                $("#tab td").each(function() {
+                    s += parseInt($(this).find('input[class*=text_box]').val());
+                    //* parseFloat($(this).find('span[class*=price]').text());
+                });
+                $("#total").html(s.toFixed(2));
+            }
+            setTotal();
+        })
+    </script>
+</body>
+
+</html>
