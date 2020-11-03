@@ -34,7 +34,6 @@
     <!-- chris add -->
     <link rel=" stylesheet " href=" ./dist/css/all.min.css ">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
 </head>
 <style>
     .esfBtn {
@@ -108,34 +107,119 @@
             </div>
             <div class="card-body">
                 <!-- AIP info -->
+                <div class="col-12 mt-4 mb-2 row">
+                    <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">Listing
+                    </h5>
+                </div>
                 <div class="row text-dark">
                     <div class="col-sm-12">
                         <!-- form start -->
-                        <div class="form-group mb-4">
-                            <div class="col-sm-12 mb-2 font-weight-bold">Please fill out these forms:</div>
-                            <div class="col-sm-12">
-                                <ul>
-                                    <li>
-                                        <span style="color: #3a87ad;font-weight:400;">Project Particulars: </span> Related Sub-Contract(s)
-                                    </li>
-                                    <li>
-                                        <span style="color: #3a87ad;font-weight:400;">Proposed Architect’s Instructions: </span> Description, Documents / Drawings, Works discipline, Abortive works involved
-                                    </li>
-                                    <li><span style="color: #3a87ad;font-weight:400;">Expected Approval Date: </span> Date, Urgent
-                                    </li>
-                                    <li><span style="color: #3a87ad;font-weight:400;">Cost And Time Implications:</span> Estimated time, Initial cost estimated, Justification, Estimated Cost Implication</li>
-                                    <li><span style="color: #3a87ad;font-weight:400;">Technical Team: </span> Proposed by, Consultant Date, Recommended by, Lead Architect Date</li>
-                                    <li><span style="color: #3a87ad;font-weight:400;">Cost Assessment Team: </span> Prepared and Recommended by, Q.S. Date</li>
-                                    <li><span style="color: #3a87ad;font-weight:400;">Client’s Team: </span> Reviewed by ESF-FDD Date, Approved by ESF Date<span class="dashicons dashicons-testimonial"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="row text-center">
-                            <div class="col-sm-12">
-                                <!-- <button type="submit" class="btn esfBtn" id="AIPconfirm" value="AIPconfirm">Start</button> -->
-                                <a href="./aip1.html" class="btn esfBtn" id="AIPconfirm" value="AIPconfirm">Start</a>
+                        <div class="table-responsive">
+                            <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                <div class="top">
+                                    <div class="dataTables_length" id="example2_length"><label>Show <select name="example2_length"
+												aria-controls="example2" class="custom-select custom-select-sm form-control form-control-sm">
+												<option value="50">50</option>
+												<option value="100">100</option>
+												<option value="500">500</option>
+												<option value="-1">All</option>
+											</select> entries</label></div>
+                                </div>
+                                <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries
+                                </div>
+                                <div id="example2_processing" class="dataTables_processing card" style="display: none;">Processing...
+                                </div>
+                                <table id="example2" class="table table-bordered table-hover listing-table dataTable dtr-inline" style="margin-bottom:40px !important;" aria-describedby="example2_info" role="grid">
+                                    <thead>
+                                        <tr role="row">
+                                            <th align="center" style="text-align:center" class="sorting_disabled" rowspan="1" colspan="1" aria-label="">
+                                            </th>
+                                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="descending" aria-label="WorkOrderNo#: activate to sort column ascending"><input placeholder="WorkOrderNo#" style="width: 100%;"></th>
+                                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="AIP No#: activate to sort column ascending"><input placeholder="AIP No#" style="width: 100%;"></th>
+                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Part: activate to sort column ascending"><input placeholder="Part" style="width: 100%;"></th>
+                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Complete: activate to sort column ascending"><input placeholder="Complete" style="width: 100%;"></th>
+                                            <th class="sorting_disabled" rowspan="1" colspan="1" aria-label="Action">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th rowspan="1" colspan="1">
+                                            </th>
+                                            <th rowspan="1" colspan="1"><input placeholder="WorkOrderNo#" style="width: 100%;"></th>
+                                            <th rowspan="1" colspan="1"><input placeholder="AIP No#" style="width: 100%;"></th>
+                                            <th rowspan="1" colspan="1"><input placeholder="Part" style="width: 100%;"></th>
+                                            <th rowspan="1" colspan="1"><input placeholder="Complete" style="width: 100%;"></th>
+                                            <th rowspan="1" colspan="1">Action</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr role="row" class="odd parent">
+                                            <td tabindex="0">
+                                                <div align="center"><input type="checkbox" id="batch_checkbox" onchange="BatchCheck(this);">
+                                                </div>
+                                            </td>
+                                            <td class="sorting_1">20/21-0063</td>
+                                            <td class="sorting_2">20/21-0063-a</td>
+                                            <td>A</td>
+                                            <td>YES</td>
+                                            <td>
+                                                <a href="./aip1.html" class="btn btn-xs btn-info" style="padding:8px;display:inline-block;margin-right:5px;white-space: nowrap;">
+                                                    <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="" style="width: 20px;">
+																										<path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+																											style="width: 20px;">
+																										</path>
+																								
+																								</svg> View</a>
+                                            </td>
+                                        </tr>
+                                        <!-- kk -->
+                                        <tr role="row" class="even">
+                                            <td tabindex="0">
+                                                <div align="center"><input type="checkbox" id="batch_checkbox" onchange="BatchCheck(this);">
+                                                </div>
+                                            </td>
+                                            <td class="sorting_1">20/21-0055</td>
+                                            <td class="sorting_2">20/21-0055-b</td>
+                                            <td>B</td>
+                                            <td>YES</td>
+                                            <td>
+                                                <a href="./aip2.html" class="btn btn-xs btn-info" style="padding:8px;display:inline-block;margin-right:5px;white-space: nowrap;">
+                                                    <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="" style="width: 20px;">
+																										<path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+																											style="width: 20px;">
+																										</path>
+																									</svg> View</a>
+                                            </td>
+                                        </tr>
+                                        <tr role="row" class="even">
+                                            <td tabindex="0">
+                                                <div align="center"><input type="checkbox" id="batch_checkbox" onchange="BatchCheck(this);">
+                                                </div>
+                                            </td>
+                                            <td class="sorting_1">20/21-0088</td>
+                                            <td class="sorting_2">20/21-0088-c</td>
+                                            <td>C</td>
+                                            <td>NO</td>
+                                            <td>
+                                                <a href="./aip3.html" class="btn btn-xs btn-info" style="padding:8px;display:inline-block;margin-right:5px;white-space: nowrap;">
+                                                    <svg class="svg-inline--fa fa-info-circle fa-w-16" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="info-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="" style="width: 20px;">
+																												<path fill="currentColor"
+																													d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+																													style="width: 20px;">
+																												</path>
+																											</svg> View</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous disabled" id="example2_previous"><a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                                        <li class="paginate_button page-item active"><a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                        <li class="paginate_button page-item next disabled" id="example2_next"><a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
                             </div>
                         </div>
                         <!-- form end -->
@@ -199,6 +283,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="./dist/js/popper.min.js"></script>
     <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js "></script>
     <script>
         $('.datepicker').datepicker();
@@ -229,6 +314,10 @@
             setTotal();
         })
     </script>
+</body>
+
+</html> })
+</script>
 </body>
 
 </html>
