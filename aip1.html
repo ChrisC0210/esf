@@ -109,12 +109,15 @@
                 <div class="row text-dark">
                     <div class="col-sm-12">
                         <!-- form start -->
-                        <form class=" ">
+                        <form class="needs-validation" novalidate>
                             <div class="form-group row">
                                 <label class="col-sm-4 col-form-label font-weight-bold">A.I.P. No</label>
                                 <div class="col-sm-8 mt-2">
                                     <!-- <input class="form-control item-content" id="aip_no" name="" placeholder="AIP No" value="-- Auto --" readonly=""> -->
                                     <input class="form-control item-content" id="aip_no" name="" placeholder="AIP No" value="20201030" required>
+                                    <div class="invalid-feedback">
+                                        Please enter A.I.P. No.
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -122,6 +125,9 @@
                                 <div class="col-sm-8 mt-2">
                                     <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy" required placeholder="Click or tap here to enter date">
                                     <!-- <input class="form-control item-content" value="2020/10/28" readonly=""> -->
+                                    <div class="invalid-feedback">
+                                        Please enter date.
+                                    </div>
                                 </div>
                             </div>
                             <!-- a -->
@@ -172,10 +178,16 @@
                             <div class="form-group">
                                 <label for="aip_description">Description</label>
                                 <textarea class="form-control" id="aip_description" rows="3" required placeholder="Click or tap here to enter text"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter text.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="aip_document">Documents / Drawings</label>
                                 <textarea class="form-control" id="aip_document" rows="2" required placeholder="Click or tap here to enter text"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter text.
+                                </div>
                                 <input type="file" class="form-control-file mt-2">
                             </div>
                             <div class="form-group row">
@@ -198,6 +210,9 @@
 																</div> -->
                                 <!-- drop down -->
                                 <label class="col-sm-12 col-form-label font-weight-bold">Works discipline <span class="text-danger">(Please check as appropriate)</span></label>
+                                <div class="invalid-feedback">
+                                    Please select works discipline.
+                                </div>
                                 <div class="col-sm-12 checkbox-group options">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="work_discipline_checkbox1" value="option1" required name="checkbox_name[]">
@@ -267,6 +282,9 @@
                                 <label class="col-sm-4 col-form-label font-weight-bold">Date</label>
                                 <div class="col-sm-8 mt-2">
                                     <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy" required placeholder="Click or tap here to enter date">
+                                    <div class="invalid-feedback">
+                                        Please select date.
+                                    </div>
                                 </div>
                             </div>
                             <div class="custom-control custom-checkbox my-1 mr-sm-2">
@@ -308,38 +326,38 @@
                                 <label class="col-sm-12 col-form-label font-weight-bold">Justification <span class="text-danger">(Please
 										check as appropriate)</span></label>
                                 <div class="col-sm-12 col-form-label">The above is the requirement of:</div>
-                                <div class="col-sm-12">
+                                <div class="col-sm-12 checkbox-group options-justification">
                                     <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox1" value="option1" required>
+                                        <input class="form-check-input" type="checkbox" id="justification_checkbox1" value="option1" required name="checkbox_justification[]">
                                         <label class="form-check-label" for="justification_checkbox1">Design Change - Consultant</label>
                                     </div>
                                     <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox2" value="option2">
+                                        <input class="form-check-input" type="checkbox" id="justification_checkbox2" value="option2" required name="checkbox_justification[]">
                                         <label class="form-check-label" for="justification_checkbox2">Contractual Procedures</label>
                                     </div>
                                     <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox3" value="option2">
+                                        <input class="form-check-input" type="checkbox" id="justification_checkbox3" value="option3" required name="checkbox_justification[]">
                                         <label class="form-check-label" for="justification_checkbox3">Design Change - ESF</label>
                                     </div>
                                     <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox4" value="option2">
+                                        <input class="form-check-input" type="checkbox" id="justification_checkbox4" value="option4" required name="checkbox_justification[]">
                                         <label class="form-check-label" for="justification_checkbox4">Re-measurement</label>
                                     </div>
                                     <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox5" value="option2">
+                                        <input class="form-check-input" type="checkbox" id="justification_checkbox5" value="option5" required name="checkbox_justification[]">
                                         <label class="form-check-label" for="justification_checkbox5">Design Change - School</label>
                                     </div>
                                     <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox6" value="option2">
+                                        <input class="form-check-input" type="checkbox" id="justification_checkbox6" value="option6" required name="checkbox_justification[]">
                                         <label class="form-check-label" for="justification_checkbox6">Claims</label>
                                     </div>
                                     <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox7" value="option2">
+                                        <input class="form-check-input" type="checkbox" id="justification_checkbox7" value="option7" required name="checkbox_justification[]">
                                         <label class="form-check-label" for="justification_checkbox7">Design Change -</label>
                                         <input type="text" for="justification_checkbox7" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
                                     </div>
                                     <div class="form-check form-check-inline font-weight-bold">
-                                        <input class="form-check-input" type="checkbox" id="justification_checkbox8" value="option2">
+                                        <input class="form-check-input" type="checkbox" id="justification_checkbox8" value="option8" required name="checkbox_justification[]">
                                         <label class="form-check-label" for="justification_checkbox8">Others:
 										</label>
                                         <input type="text" for="justification_checkbox8" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
@@ -349,6 +367,9 @@
                             <div class="form-group">
                                 <div class="mb-2" for="aip_justificatio">and is considered necessary for reasons :</div>
                                 <textarea class="form-control" id="aip_justificatio" rows="2" required placeholder="Click or tap here to enter text"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter text.
+                                </div>
                             </div>
                             <!-- for c -->
                             <!-- <div class="row">
@@ -563,24 +584,36 @@
                             <div class="form-group">
                                 <label for="aip_proposed">Proposed by</label>
                                 <textarea class="form-control" id="aip_proposed" rows="1" required placeholder="Click or tap here to enter text"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter text.
+                                </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <div class="col-sm-12 font-weight-bold">Consultant</div>
                                 <label class="col-sm-4 col-form-label">Date</label>
                                 <div class="col-sm-8 mt-2">
                                     <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy" required placeholder="Click or tap here to enter date">
+                                    <div class="invalid-feedback">
+                                        Please select date.
+                                    </div>
                                 </div>
                             </div>
                             <hr>
                             <div class="form-group mt-4">
                                 <label for="aip_recommended">Recommended by</label>
                                 <textarea class="form-control" id="aip_recommended" rows="1" required placeholder="Click or tap here to enter text"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter text.
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12 font-weight-bold">Lead Architect</div>
                                 <label class="col-sm-4 col-form-label">Date</label>
                                 <div class="col-sm-8 mt-2">
                                     <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy" required placeholder="Click or tap here to enter date">
+                                    <div class="invalid-feedback">
+                                        Please select date.
+                                    </div>
                                 </div>
                             </div>
                             <!-- f -->
@@ -592,12 +625,18 @@
                             <div class="form-group">
                                 <label for="aip_prepared">Prepared and Recommended by</label>
                                 <textarea class="form-control" id="aip_prepared" rows="1" required placeholder="Click or tap here to enter text"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter text.
+                                </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <div class="col-sm-12 font-weight-bold">Q.S.</div>
                                 <label class="col-sm-4 col-form-label">Date</label>
                                 <div class="col-sm-8 mt-2">
                                     <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy" required placeholder="Click or tap here to enter date">
+                                    <div class="invalid-feedback">
+                                        Please select date.
+                                    </div>
                                 </div>
                             </div>
                             <!-- f -->
@@ -612,6 +651,9 @@
                                 <label class="col-sm-4 col-form-label">Date</label>
                                 <div class="col-sm-8 mt-2">
                                     <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy" required placeholder="Click or tap here to enter date">
+                                    <div class="invalid-feedback">
+                                        Please select date.
+                                    </div>
                                 </div>
                             </div>
                             <hr>
@@ -621,6 +663,9 @@
                                 <label class="col-sm-4 col-form-label">Date</label>
                                 <div class="col-sm-8 mt-2">
                                     <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy" required placeholder="Click or tap here to enter date">
+                                    <div class="invalid-feedback">
+                                        Please select date.
+                                    </div>
                                 </div>
                             </div>
                             <div class="row text-center">
@@ -720,9 +765,10 @@
             var AIPconfirm = document.getElementById("AIPconfirm");
             AIPconfirm.onclick = function() {
                 if (confirm("Are you sure you want to send this form? ")) {
-                    alert("Thanks for your submit! ");
+                    //alert("Thanks for your submit! ");
                 } else {
-                    //alert(" ");
+                    return false;
+                    //alert("Opps, something wason't right");
                 }
             }
         };
@@ -735,7 +781,36 @@
                     requiredCheckboxes.attr('required', 'required');
                 }
             });
+            var requiredCheckboxesJustification = $('.options-justification :checkbox[required]');
+            requiredCheckboxesJustification.change(function() {
+                if (requiredCheckboxesJustification.is(':checked')) {
+                    requiredCheckboxesJustification.removeAttr('required');
+                } else {
+                    requiredCheckboxesJustification.attr('required', 'required');
+                }
+            });
         });
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            alert("Opps, something wason't right");
+                        } else {
+                            alert("Thanks for your submit! ");
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
     </script>
 </body>
 
