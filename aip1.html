@@ -198,37 +198,37 @@
 																</div> -->
                                 <!-- drop down -->
                                 <label class="col-sm-12 col-form-label font-weight-bold">Works discipline <span class="text-danger">(Please check as appropriate)</span></label>
-                                <div class="col-sm-12 checkbox-group required">
+                                <div class="col-sm-12 checkbox-group options">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox1" value="option1" name="checkbox_name[]">
+                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox1" value="option1" required name="checkbox_name[]">
                                         <label class="form-check-label" for="work_discipline_checkbox1">Project-wise</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox2" value="option2" name="checkbox_name[]">
+                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox2" value="option2" required name="checkbox_name[]">
                                         <label class="form-check-label" for="work_discipline_checkbox2">Adv. Work</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox3" value="option2" name="checkbox_name[]">
+                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox3" value="option2" required name="checkbox_name[]">
                                         <label class="form-check-label" for="work_discipline_checkbox3">Civil & Str.</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox4" value="option2" name="checkbox_name[]">
+                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox4" value="option2" required name="checkbox_name[]">
                                         <label class="form-check-label" for="work_discipline_checkbox4">ABWF</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox5" value="option2" name="checkbox_name[]">
+                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox5" value="option2" required name="checkbox_name[]">
                                         <label class="form-check-label" for="work_discipline_checkbox5">M & E</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox6" value="option2" name="checkbox_name[]">
+                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox6" value="option2" required name="checkbox_name[]">
                                         <label class="form-check-label" for="work_discipline_checkbox6">FF&E</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox7" value="option2" name="checkbox_name[]">
+                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox7" value="option2" required name="checkbox_name[]">
                                         <label class="form-check-label" for="work_discipline_checkbox7">External</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox8" value="option2" name="checkbox_name[]">
+                                        <input class="form-check-input" type="checkbox" id="work_discipline_checkbox8" value="option2" required name="checkbox_name[]">
                                         <label class="form-check-label" for="work_discipline_checkbox8">Others:
 																				</label>
                                         <input type="text" for="work_discipline_checkbox8" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
@@ -726,7 +726,16 @@
                 }
             }
         };
-        $('div.checkbox-group.required :checkbox:checked').length > 0
+        $(function() {
+            var requiredCheckboxes = $('.options :checkbox[required]');
+            requiredCheckboxes.change(function() {
+                if (requiredCheckboxes.is(':checked')) {
+                    requiredCheckboxes.removeAttr('required');
+                } else {
+                    requiredCheckboxes.attr('required', 'required');
+                }
+            });
+        });
     </script>
 </body>
 
