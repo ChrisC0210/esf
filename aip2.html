@@ -111,29 +111,89 @@
                 <div class="row text-dark">
                     <div class="col-sm-12">
                         <!-- form start -->
-                        <form>
+                        <form class="needs-validation" novalidate>
                             <div class="form-group row">
-                                <legend class="col-sm-12 col-form-label font-weight-bold">Abortive works involved
-                                </legend>
+                                <label class="col-sm-4 col-form-label font-weight-bold">A.I.P. No</label>
+                                <div class="col-sm-8 mt-2">
+                                    <!-- <input class="form-control item-content" id="aip_no" name="" placeholder="AIP No" value="-- Auto --" readonly=""> -->
+                                    <input class="form-control item-content" id="aip_no" name="" placeholder="AIP No" value="20201030" required>
+                                    <div class="invalid-feedback">
+                                        Please enter A.I.P. No.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label font-weight-bold">Date</label>
+                                <div class="col-sm-8 mt-2">
+                                    <input class="form-control item-content datepicker" data-date-format="mm/dd/yyyy" required placeholder="Click or tap here to enter date">
+                                    <!-- <input class="form-control item-content" value="2020/10/28" readonly=""> -->
+                                    <div class="invalid-feedback">
+                                        Please enter date.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- a -->
+                            <div class="col-12 mt-4 mb-2 row">
+                                <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">PROJECT PARTICULARS
+                                </h5>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label font-weight-bold">Project</label>
+                                <div class="col-sm-8 mt-2">
+                                    <input type="text" class="form-control item-content" id="aip_project" name="" placeholder="AIP Project" value="Island School Redevelopment" readonly="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label font-weight-bold">Contract</label>
+                                <div class="col-sm-8 mt-2">
+                                    <input type="text" class="form-control item-content" id="aip_contract" name="" placeholder="AIP Contract" value="Main Contract" readonly="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label font-weight-bold">Employer</label>
+                                <div class="col-sm-8 mt-2">
+                                    <input type="text" class="form-control item-content" id="aip_employer" name="" placeholder="AIP Employer" value="English Schools Fundation" readonly="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label font-weight-bold">Contractor</label>
+                                <div class="col-sm-8 mt-2">
+                                    <input type="text" class="form-control item-content" id="aip_contractor" name="" placeholder="AIP Contractor" value="Build King Construction Limited" readonly="">
+                                </div>
+                            </div>
+                            <!-- b -->
+                            <div class="col-12 mt-4 mb-2 row">
+                                <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">PROPOSED ARCHITECT’S INSTRUCTIONS
+                                </h5>
+                            </div>
+                            <div class="form-group">
+                                <label for="aip_document_partb">Documents / Drawings</label>
+                                <textarea class="form-control" id="aip_document_partb" rows="2" required placeholder="Click or tap here to enter text"></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter text.
+                                </div>
+                                <input type="file" class="form-control-file mt-2">
+                            </div>
+                            <div class="form-group row">
+                                <legend class="col-sm-12 col-form-label font-weight-bold">Abortive works involved <span class="text-danger"> (If YES,
+																	please estimate extent)</span></legend>
                                 <div class="col-sm-10">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="works_involved_radios" id="works_involved_radios1" value="option1" checked>
                                         <label class="form-check-label" for="works_involved_radios1">
-                                    NO
-                                  </label>
+																		NO
+																	</label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="works_involved_radios" id="works_involved_radios2" value="option2">
                                         <label class="form-check-label" for="works_involved_radios2">
-                                    YES
-                                  </label>
+																		YES
+																	</label>
+                                        <input type="text" for="works_involved_radios2" style="border:0px solid;border-bottom:1px solid rgb(26, 26, 26);border-radius:0px;">
 
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="aip_works_involved" style="font-weight: 400;">Description</label>
-                                <textarea class="form-control" id="aip_works_involved" rows="3"></textarea>
+
                             </div>
                             <!-- 2 -->
                             <div class="form-group row">
@@ -143,32 +203,50 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="works_builder_radios" id="works_builder_radios1" value="option1" checked>
                                         <label class="form-check-label" for="works_builder_radios1">
-                                    NO
-                                  </label>
+											NO
+										</label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="works_builder_radios" id="works_builder_radios2" value="option2">
                                         <label class="form-check-label" for="works_builder_radios2">
-                                    YES
-                                  </label>
+											YES
+										</label>
 
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="aip_works_builder" style="font-weight: 400;">Description</label>
-                                <textarea class="form-control" id="aip_works_builder" rows="3"></textarea>
+
+                            <!-- d -->
+                            <div class="col-12 mt-4 mb-2 row">
+                                <h5 style="color:#3a87ad; font-weight: 500;border-left: 6px solid #3a87ad;padding-left: 10px;">COST AND TIME IMPLICATIONS
+                                </h5>
                             </div>
+                            <div class="form-group row col-12">
+                                <label class="col-form-label font-weight-bold mr-2">Estimated time</label>
+                                <div class="col-sm-3 d-flex">
+                                    <select class="form-control mr-2 mb-2" placeholder="Estimated time" required>
+																	<option>saved</option>
+																	<option>prolonged</option>
+																	<option>N/A</option>
+																</select>
+                                    <span class="mt-2">By</span>
+                                </div>
+                                <div class="col-sm-3 number-input d-flex">
+                                    <input class="form-control quantity mr-2 mb-2" min="0" name="quantity" value="0" type="number" required>
+                                    <span class="mt-2">day(s)</span>
+                                </div>
+                            </div>
+
                             <!-- 3 -->
-                            <div class="form-group mt-4">
+                            <!-- <div class="form-group mt-4">
                                 <label for="aip_technical">Technical endorsement or Rejection</label>
                                 <textarea class="form-control" id="aip_technical" rows="3"></textarea>
-                            </div>
+                            </div> -->
                             <!-- btn -->
                             <div class="row text-center ">
                                 <div class="col-sm-12">
-                                    <button type="submit" class="btn esfBtn-outline" value="Reject">Reject</button>
-                                    <button type="submit" class="btn esfBtn" value="Endorsed">Endorsed</button>
+                                    <a href="./aip1.html" class="btn esfBtn-outline" value="Reject" id="reject">Reject</a>
+                                    <button type="submit" class="btn esfBtn" value="Endorsed" id="endorsed">Endorsed</button>
                                 </div>
                             </div>
                         </form>
@@ -261,7 +339,57 @@
                 $("#total").html(s.toFixed(2));
             }
             setTotal();
-        })
+        });
+        window.onload = function() {
+            var endorsedConfirm = document.getElementById("endorsed");
+            endorsedConfirm.onclick = function() {
+                if (confirm("Are you sure you want to send this form? ")) {
+                    //alert("Thanks for your submit! ");
+                } else {
+                    return false;
+                    //alert("Opps, something wason't right");
+                }
+            }
+        };
+        $(function() {
+            var requiredCheckboxes = $('.options :checkbox[required]');
+            requiredCheckboxes.change(function() {
+                if (requiredCheckboxes.is(':checked')) {
+                    requiredCheckboxes.removeAttr('required');
+                } else {
+                    requiredCheckboxes.attr('required', 'required');
+                }
+            });
+            var requiredCheckboxesJustification = $('.options-justification :checkbox[required]');
+            requiredCheckboxesJustification.change(function() {
+                if (requiredCheckboxesJustification.is(':checked')) {
+                    requiredCheckboxesJustification.removeAttr('required');
+                } else {
+                    requiredCheckboxesJustification.attr('required', 'required');
+                }
+            });
+        });
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            alert("Opps, something wason't right");
+                        } else {
+                            alert("Thanks for your submit! ");
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
     </script>
 </body>
 
