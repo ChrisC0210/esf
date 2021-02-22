@@ -10832,9 +10832,10 @@ a.text-dark:focus, a.text-dark:hover {
   height: 80vh;
 }
 
-.banner-img {
+.banner-imgs {
   width: 100%;
-  min-height: 300px;
+  min-height: 300px !important;
+  max-height: 300px !important;
   -o-object-fit: scale-down;
      object-fit: scale-down;
   filter: drop-shadow(2px 4px 4px rgba(110, 110, 110, 0.4));
@@ -10853,7 +10854,7 @@ a.text-dark:focus, a.text-dark:hover {
   position: absolute;
   left: 0;
   z-index: -1;
-  height: 600px;
+  max-height: 400px !important;
   width: 100%;
   opacity: 0.5;
   background-repeat: no-repeat;
@@ -10862,7 +10863,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 @media screen and (max-width: 375px) {
   .banner-bg:before {
-    height: 580px;
+    max-height: 200px !important;
   }
 }
 

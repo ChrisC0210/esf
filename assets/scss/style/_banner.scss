@@ -53,10 +53,11 @@
 }
 //new
 //210222 chris add
-.banner-img{
+.banner-imgs{
   //height: 100%;
   width: 100%;
-  min-height: 300px;
+  min-height: 300px !important;
+  max-height: 300px !important;
   //background-color: rgb(121, 121, 121);
   object-fit: scale-down;
   filter: drop-shadow(2px 4px 4px rgba(110,110,110,0.4));
@@ -80,7 +81,7 @@
     //top: 80px;
     left: 0;
     z-index: -1;
-    height:  600px;
+    max-height:  400px !important;
     width: 100%;
     //background-image: url("./assets/img/img-banner-bg.jpg");
     opacity:0.5;//透明度设置
@@ -88,7 +89,7 @@
     //background-size: 100% 100%;
     background-size: cover;
     @media screen and (max-width: 375px) {
-      height:  580px;
+      max-height:  200px !important;
     }
   }
 }
