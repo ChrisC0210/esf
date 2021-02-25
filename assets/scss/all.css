@@ -10160,6 +10160,18 @@ a.text-dark:focus, a.text-dark:hover {
     border-color: #dee2e6;
   }
 }
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+}
+
 .white {
   color: #fefefe !important;
 }
@@ -11095,6 +11107,19 @@ a.text-dark:focus, a.text-dark:hover {
     width: 300px;
     height: 200px;
     border-radius: 20px;
+  }
+}
+
+.esf-bg-home {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: -webkit-fill-available;
+}
+
+@media screen and (max-width: 800px) {
+  .esf-bg-home {
+    height: auto;
   }
 }
 
