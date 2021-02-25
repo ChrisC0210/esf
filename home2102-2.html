@@ -38,6 +38,37 @@
 	a:hover, a:active {
 		color: #610528;
 }
+/* .banner-imgs{
+  max-height: 500px !important;
+} */
+.marquee {
+  height: 25px;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 48px;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% { left: 60%; }
+  100% { left: -90%; }
+}
 </style>
 <body>
   <!-- header -->
@@ -159,6 +190,18 @@
     </div>
   </div>
   <!-- new -->
+        <!-- 111 -->
+        <div class="container" style="position: relative; padding-bottom: 80px;">
+          <h3>
+          <span class="badge badge-secondary">News</span>
+          </h3>
+          <div class="marquee">
+            <div>
+              <span>Text something here</span>
+              <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente reprehenderit laboriosam dolorum, deserunt voluptatibus ad ex similique aperiam? Dolore voluptate et ipsa consectetur obcaecati quia, nostrum porro quaerat doloribus laboriosam.å</span>
+            </div>
+          </div>
+        </div>
   </div>
 
   <!-- content -->
