@@ -33,9 +33,9 @@
 	a:hover, a:active {
 		color: #610528;
 }
-.banner-imgs{
-  max-height: 250px !important;
-}
+/* .banner-imgs{
+  max-height: 500px !important;
+} */
 </style>
 <body>
   <!-- header -->
@@ -56,10 +56,10 @@
 	<!-- content -->
   <!-- slider -->
   <div class="banner-bg d-flex justify-content-center mb-4" style="background-image: url('./assets/img/esf-bg-login.jpg');height: 90vh;">
-    <div class="container d-flex flex-lg-row flex-md-row flex-column">
-      <div class="col-lg-6 col-md-6 col-sm-12 align-self-center mt-4">
+    <div class="container col-10 row d-flex justify-content-center flex-xl-row flex-lg-row flex-md-row flex-sm-column">
+      <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 align-self-center mt-4">
         <!-- login -->
-        <div class="login-box">
+        <div class="login-box col-xl-12">
           <!-- <div class="login-logo ">
               
               <img src="http://esf-ffd.vela.hk/dist/img/logo.png" alt="Logo" class="brand-image img-circle elevation-3 " style="opacity: .8;" width="70">
@@ -120,16 +120,22 @@
         </div>
         <!-- login -->
       </div>
-      <div id="headerBannerControls" class="carousel slide content col-lg-6 col-md-6 col-sm-12 align-self-center" data-ride="carousel" style="z-index: 1;">
+      <div id="headerBannerControls" class="carousel slide content col-xl-6 col-lg-8 col-md-12 col-sm-12 align-self-center" data-ride="carousel" style="z-index: 1;">
         <div class="carousel-inner">
-          <div class="carousel-item carousel-item-next carousel-item-left">
-            <img src="./assets/img/photo-2.jpg" class="d-block banner-imgs" alt="1">
+          <div class="carousel-item active">
+            <img src="./assets/img/fm.jpg" class="d-block banner-imgs" alt="1">
           </div>
           <div class="carousel-item">
-            <img src="./assets/img/photo-3.jpg" class="d-block banner-imgs"  alt="2">
+            <img src="./assets/img/project.jpg" class="d-block banner-imgs" alt="2">
           </div>
-          <div class="carousel-item active carousel-item-left">
-            <img src="./assets/img/photo-4.jpg" class="d-block banner-imgs" alt="3">
+          <div class="carousel-item">
+            <img src="./assets/img/logistic.jpg" class="d-block banner-imgs" alt="3">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/img/resi.jpg" class="d-block banner-imgs" alt="4">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/img/hs.jpg" class="d-block banner-imgs" alt="5">
           </div>
         </div>
         <a class="carousel-control-prev" href="#headerBannerControls" role="button" data-slide="prev">
@@ -144,8 +150,8 @@
     </div>
   </div>
   <!-- slider -->
+  <!-- content -->
 
-	<!-- content -->
   <!-- footer -->
   <footer class="fixed-bottom" style="opacity: 0.8; background-color: rgba(125, 0, 47, 1);">
     <div class="container white pt-2 pb-2">
