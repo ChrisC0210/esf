@@ -1,8 +1,9 @@
 .esf-bg-home{
-	position: absolute;top:0;
+	position: relative;
+	top:0;
 	width: 100%;  
 	height:-webkit-fill-available; 
-	
+	padding: 20px 0 40px 0;
 	@media screen and (max-width: 800px) {
 		height: auto;
 	}
