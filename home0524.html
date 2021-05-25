@@ -1,0 +1,1584 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ESF-FDD</title>
+  
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSRF Token -->
+    <meta name="csrf-token" content="zLu8D1ZjQ3qGgF1YOx6ZcnvCfOdfkH1VSaLSxuUj">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link id="bsdp-css" href="https://esf-fdd-dev.vela.hk/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.standalone.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/daterangepicker/daterangepicker.css">
+        <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- Select2 -->
+  <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+  
+  <!-- summernote -->
+  <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/plugins/summernote/summernote-bs4.css">
+   
+  <link href="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://esf-fdd-dev.vela.hk/css/steps.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="https://esf-fdd-dev.vela.hk/dist/css/all.min.css" media="all" rel="stylesheet" type="text/css"/>
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/dist/css/adminlte.min.css">
+  <link href="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/themes/explorer-fas/theme.css" media="all" rel="stylesheet" type="text/css"/>
+</head>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+<!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+          </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+              <!-- Notifications Dropdown Menu -->
+                    <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell" ></i>
+          
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          
+          
+          <a href="###" class="dropdown-item">
+            <i class="fas fa-envelope"></i> Email alert
+            <span class="float-right text-muted text-sm">
+            <input type="checkbox" name="email_alert_btn" id="email_alert_btn"   >
+            </span>
+            
+          </a>
+       
+        </div>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="https://esf-fdd-dev.vela.hk/logout" role="button" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                       
+          <i class="fas fa-power-off"></i>
+        </a>
+           <form id="logout-form" action="https://esf-fdd-dev.vela.hk/logout" method="POST" style="display: none;">
+                                        <input type="hidden" name="_token" value="zLu8D1ZjQ3qGgF1YOx6ZcnvCfOdfkH1VSaLSxuUj">
+                                    </form>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+<!-- Main Sidebar Container -->
+  <style>
+    textarea { 
+      resize:none; 
+    } 
+
+    .custom-selection .dropdown-menu {
+      max-height: 150px !important;
+    }
+		.bs-example{
+			margin: 0px;
+			position: absolute;
+			right: 0;
+			top: 100px;
+			z-index: 999;
+			width: 400px;
+    }
+  </style>
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="/" class="brand-link">
+      <img src="https://esf-fdd-dev.vela.hk/dist/img/logo.png"
+           alt="Logo"
+           class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">ESF</span>
+    </a>
+
+    <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="https://esf-fdd-dev.vela.hk/dist/img/user.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">John Stewart</a>
+          
+        </div>
+      </div>
+      
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false" style="margin-left:-4px;padding-bottom:30px;">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          
+                    <li align="left" class="nav-header" style="padding-left:20px;font-size:16px;color:white;font-weight:bold;white-space:nowrap;">
+            Operations<br>(Works, Finance & Payments)
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                RFQ
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">0</span>
+                              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/rfq/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                Work Order
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right" style="">
+                  0
+                </span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/workorder/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                Payment
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-danger right">
+                0
+                </span>
+
+              </p>
+            </a>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/invoice/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/invoice/export/step1" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Export</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/invoice/import_cheque/step1" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Import Cheque</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+         <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                Variation Order
+                <i class="fas fa-angle-left right"></i>
+         
+                <span class="badge badge-warning right">
+                0
+                </span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/vo/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                SMT Memo
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">0</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/memo/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-file-invoice-dollar"></i>
+              <p>
+                Budgeting
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/budget_tier1/2/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Current financial year</p>
+                </a>
+              </li>
+                          </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-calendar-alt"></i>
+              <p>
+                Report 
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/report/dailyReportSummary" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Daily Summary</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/workorder/report/wo_main_table" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Work Order Main Table</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/workorder/report/invoice_detail_table" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Invoice Detail Table</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/workorder/report/variation_table" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Variation Table</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/workorder/report/rfq_report" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>RFQ Report</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/workorder/report/account_outstanding_payment" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Outstanding Payment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/workorder/report/download_report_input" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Invoice Query</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/workorder/report/download_VoSum_input" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>VO Sum</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/workorder/report/download_VoSummary_input" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>VO Summary</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/workorder/report/budgeting_report" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Budgeting Report</p>
+                </a>
+              </li>
+                            <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/report/management" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Management Report</p>
+                </a>
+              </li>
+                          </ul>
+          </li>
+          
+          <hr>
+          		  <li class="nav-item">
+              <a href="https://esf-fdd-dev.vela.hk/master/contractor/listing" class="nav-link">
+                <i class="fa fa-list nav-icon"></i>
+                <p>Contractor List</p>
+              </a>
+          </li>
+		  <li class="nav-item">
+              <a href="https://esf-fdd-dev.vela.hk/wo_policy" class="nav-link">
+                <i class="fa fa-book nav-icon"></i>
+                <p>WO Policy</p>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://esf-fdd-dev.vela.hk/user/2/edit_password" class="nav-link">
+              <i class="nav-icon fas fa-key"></i>
+              <p>
+                Reset Password 
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="https://esf-fdd-dev.vela.hk/message/chatbox" class="nav-link">
+              <i class="nav-icon fa fa-thumbs-up"></i>
+              <p>
+                Feedback Forum
+                <span id="feedbackNum" class="badge badge-warning right" style="">
+                1
+                </span>
+              </p>
+            </a>
+          </li>
+          
+        <!-- menu content start -->
+                        <!-- start of isr menu -->
+        <li align="left" class="nav-header" style="padding-left:20px;font-size:16px;color:white;font-weight:bold;white-space:nowrap;">
+            Projects<br>(Works, Finance & Payments)
+        </li>
+		<li class="nav-item has-treeview item-menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                RFQ
+                <i class="fas fa-angle-left right"></i>
+				        <span class="badge badge-info right" style="">
+                  0
+                </span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/rfq/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          <li class="nav-item has-treeview item-menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                Work Order
+                <i class="fas fa-angle-left right"></i>
+				<span class="badge badge-info right" style="">
+                  0
+                </span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/workorder/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview item-menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                Payment
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-danger right">
+                0
+                </span>
+              </p>
+            </a>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/invoice/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/invoice/export/step1" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Export</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/invoice/import_cheque/step1" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Import Cheque</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+        <li class="nav-item has-treeview item-menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                Variation Order
+                <i class="fas fa-angle-left right"></i>
+				<span class="badge badge-warning right">
+                0
+                </span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/vo/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview item-menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                AIP
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-success right">0</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/aip/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/aip/import" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Import</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/aip/export" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Export</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                Subvention
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/subvention/create" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/subvention/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview item-menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                Claim
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/claim/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview item-menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-file-alt"></i>
+              <p>
+                Quotation
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/quotation/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-file-invoice-dollar"></i>
+              <p>
+                Budgeting
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/budget_tier1/2/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Current financial year</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-calendar-alt"></i>
+              <p>
+                Report 
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/workorder/report/wo_main_table" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Work Order Main Table</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/workorder/report/invocie_detail_table" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Invoice Detail Table</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/workorder/report/variation_table" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Variation Table</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/workorder/report/account_outstanding_payment" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Outstanding Payment</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/workorder/report/download_report_input" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Invoice Query</p>
+                </a>
+              </li>
+              <li class="nav-item" hidden>
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/workorder/report/download_VoSum_input" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>VO Summary</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/workorder/report/budgeting_report" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Budgeting Report</p>
+                </a>
+              </li>
+                            <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/report/management" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Management Report</p>
+                </a>
+              </li>
+                          </ul>
+          </li>
+          <!-- end of isr menu -->
+          
+                             <li align="center" class="nav-header" style="font-size:14pt;font-weight:bold;">
+            <li class="nav-item has-treeview item-menu">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa fa-list"></i>
+                <p>SETTING</p>
+                <i class="fas fa-angle-left right"></i>
+              </a>
+          <ul class="nav nav-treeview">
+
+          <li align="left" class="nav-header" style="font-size:16px;color:white;font-weight:bold;">
+            Main
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                System User
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/user/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-database"></i>
+              <p>
+                Master
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/master/budget_classification/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Budget Classification</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/master/special_event/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Special Event</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/master/job_nature/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Job Nature</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/master/financial_year/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Financial Year</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/master/location_unit/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> ESF/Resi/ESL</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/master/attachment_classification/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Attachment Classification</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/master/account_code/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Account Code</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/master/ffm_code/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>FFM Code</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/master/source_fund/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Source Fund</p>
+                </a>
+              </li>
+              
+             </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cogs"></i>
+              <p>
+                Main Authorization
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/approvalauth/main/default" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Default User</p>
+                </a>
+              </li>
+              
+
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/approvalauth/main/config" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Authorization Configure</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cog"></i>
+              <p>
+                SMT Memo Authorization
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/approvalauth/memo/default" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Default User</p>
+                </a>
+              </li>
+              
+
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/approvalauth/memo/config" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Authorization Configure</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p>
+                Batch Action
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/batch/initiator" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Initiator Ownership</p>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/batch/admin" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Administrator Ownership</p>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/batch/history" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ownership History</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-bell"></i>
+              <p>
+                System Alert
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/alert/create" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Alert</p>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/alert/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Listing</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+		
+                    <!-- start of isr setting menu -->
+          <li align="left" class="nav-header" style="font-size:16px;color:white;font-weight:bold;">
+            ISR
+          </li>
+
+          <li class="nav-item has-treeview item-menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-database"></i>
+              <p>
+                Master
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/master/consultant/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Consultant</p>
+                </a>
+              </li>
+                            <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/master/budget_classification/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Budget Classification</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/master/special_event/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Special Event</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/master/financial_year/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Financial Year</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/master/location_unit/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> ESF/Resi/ESL</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/master/attachment_classification/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Attachment Classification</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/master/account_code/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Account Code</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/master/ffm_code/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>FFM Code</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a  href="https://esf-fdd-dev.vela.hk/item/isr/master/source_fund/listing" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Source Fund</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview item-menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cogs"></i>
+              <p>
+                Main Authorization
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/approvalauth/main/default" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Default User</p>
+                </a>
+              </li>
+              
+
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/approvalauth/main/config" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Authorization Configure</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview item-menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cog"></i>
+              <p>
+                AIP Authorization
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/approvalauth/aip/default" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Default User</p>
+                </a>
+              </li>
+              
+
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/approvalauth/aip/config" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Authorization Configure</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p>
+                Batch Action
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/batch/initiator" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Initiator Ownership</p>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/batch/admin" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Administrator Ownership</p>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="https://esf-fdd-dev.vela.hk/item/isr/batch/history" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ownership History</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- end of isr setting menu -->
+          
+                    </ul>
+          </li>
+          </li>
+        <!-- menu content end -->
+           
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+				<!-- toasts -->
+				<div class="bs-example">    
+					<div class="toast fade show">
+							<div class="toast-header">
+									<strong class="mr-auto"><i class="far fa-envelope"></i> Hello!</strong>
+									<small class="text-muted">just now</small>
+									<button type="button" class="ml-2 mb-1 close">&times;</button>
+							</div>
+							<div class="toast-body">message one</div>
+					</div>
+			
+					<div class="toast fade" data-autohide="false">
+							<div class="toast-header">
+									<strong class="mr-auto"><i class="far fa-envelope"></i> News</strong>
+									<small class="text-muted">5 minutes ago</small>
+									<button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+							</div>
+							<div class="toast-body">message 2 Lorem ipsum dolor sit amet.</div>
+					</div>    
+
+					<div class="toast fade show" data-autohide="false">
+						<div class="toast-header">
+								<strong class="mr-auto"><i class="far fa-envelope"></i> Message</strong>
+								<small class="text-muted">10 minutes ago</small>
+								<button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+						</div>
+						<div class="toast-body">consectetur adipisicing elit. Id commodi quod beatae. Maxime ex quaerat eligendi iste, labore soluta eveniet voluptate eum, molestiae suscipit incidunt autem provident voluptates eos dolore.</div>
+				</div>  
+
+			</div>
+				<!-- toasts -->
+  <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <img src="https://esf-fdd-dev.vela.hk/dist/img/logo.png" alt="Logo" class="brand-image img-circle elevation-3 responsive" width="50" style="opacity: .8">
+                    <h1 class="esf-red" style="vertical-align:middle;display:inline-block;margin-left:5px">
+                    Welcome</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="https://esf-fdd-dev.vela.hk/home">Home</a></li>
+                        <li class="breadcrumb-item active ">Welcome</li>
+      
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+<div class="row">
+        <div class="col-md-12">
+        
+        
+        
+        
+        <div class="card">
+
+<div class="card-header">
+    <h3 class="card-title">Status Analysis Table</h3>
+    <div class="card-tools">
+        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+        <!-- <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button> -->
+    </div>
+</div>
+
+<div id="" class="card-body">
+    <table width="100%" cellpadding="6">
+    <tr>
+        <td align="left" colspan="6" style="border:none;font-weight:bold;">TOTAL CREATED</td>
+    </tr>
+    <tr>
+        <td align="center" style="border:none;"></td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">Project</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">Central</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">FM</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">H&S</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">Logistics</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">Resi</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">RFQ</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">28</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">2</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">4</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">WO</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">14</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">2</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">0</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">4</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">Payment</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">24</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">2</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">1</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">0</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">12</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">VO</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">14</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">0</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">4</td>
+            </tr>
+    </table>
+
+    <table width="100%" cellpadding="6" style="margin-top:50px;">
+    <tr>
+    <td align="left" colspan="6" style="border:none;font-weight:bold;">TOTAL Pending</td>
+    </tr>
+    <tr>
+        <td align="center" style="border:none;"></td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">Project</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">Central</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">FM</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">H&S</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">Logistics</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">Resi</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">RFQ</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">9</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">1</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">2</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">WO</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">9</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">2</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">0</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">1</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">Payment</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">2</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">1</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">0</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">6</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">VO</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">8</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">0</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">2</td>
+            </tr>
+    </table>
+
+    <table width="100%" cellpadding="6" style="margin-top:50px;display:none;">
+    <tr>
+        <td align="left" colspan="6" style="border:none;font-weight:bold;">TOTAL PENDING BY TEAM MANAGERS OVER 5 DAYS</td>
+    </tr>
+    <tr>
+        <td align="center" style="border:none;"></td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">Project</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">Central</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">FM</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">H&S</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">Logistics</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">Resi</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">RFQ</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">5</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">0</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">2</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">WO</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">1</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">0</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">0</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">Payment</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">1</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">1</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">0</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">0</td>
+            </tr>
+    <tr>
+        <td align="center" style="border:2px solid black;">VO</td>
+                <td align="center" style="border:2px solid black;background-color:#FCE4D6">0</td>
+                <td align="center" style="border:2px solid black;background-color:#BDD7EE">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFFF99">0</td>
+                <td align="center" style="border:2px solid black;background-color:#FFCCFF">0</td>
+                <td align="center" style="border:2px solid black;background-color:#E2EFDA">0</td>
+                <td align="center" style="border:2px solid black;background-color:#F4A460">0</td>
+            </tr>
+    </table>
+</div>
+
+</div>
+        <div class="card"><div class="card-header"><h3 class="card-title">Spent Analysis</h3><div class="card-tools"><button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button></div></div><div id="" class="card-body"><canvas id="stackedBarChart_9" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%; display: block; width: 572px;" width="715" height="312" class="chartjs-render-monitor"></canvas></div></div>
+        
+
+          </div>
+            </div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+	<!-- Feedback Forum -->
+	<div class="modal" tabindex="-1" role="alert" id="feedbackMsg">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Welcome Back 🎉</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body" style="color: #333;">
+					<div>
+						You have 
+						<span id="msgNum"></span>
+						unread message on <a style="color: #333;" href="https://esf-fdd-dev.vela.hk/message/chatbox">Feedback Forum</a>.
+					</div>
+				</div>
+				<div class="modal-footer">
+        <a href="https://esf-fdd-dev.vela.hk/message/chatbox" class="btn btn-primary col-12" style="background-color: #7d002f;border-color: #7d002f;text-decoration: none;">Check out</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Feedback Forum -->
+
+
+  <div class="modal fade show" id="system-loading-page" style="display: none; padding-right: 17px; background-color:rgba(0,0,0,0.5);" aria-modal="true">
+    <div class="modal-dialog modal-lg" align="center">
+      <div class="modal-content d-flex justify-content-center align-items-center" align="center" style="margin-top:50%;box-shadow:none;background:none;border:none;">
+        <button class="btn btn-default" type="button" disabled="" style="padding:20px 40px;">
+          <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+          Loading...
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 1.0
+    </div>
+    <strong>Copyright &copy; 2020 <a href="/" class="esf-red">English Schools Foundation</a>.</strong> All rights
+    reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="https://esf-fdd-dev.vela.hk/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="https://esf-fdd-dev.vela.hk/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="https://esf-fdd-dev.vela.hk/plugins/chart.js/Chart.min.js"></script>
+<!-- Select2 -->
+<script src="https://esf-fdd-dev.vela.hk/plugins/select2/js/select2.full.min.js"></script>
+<!-- DataTables -->
+<script src="https://esf-fdd-dev.vela.hk/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="https://esf-fdd-dev.vela.hk/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://esf-fdd-dev.vela.hk/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="https://esf-fdd-dev.vela.hk/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="https://esf-fdd-dev.vela.hk/plugins/sorting/natural.js"></script>
+
+<script src="https://esf-fdd-dev.vela.hk/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="https://esf-fdd-dev.vela.hk/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.min.js" charset="UTF-8"></script>
+<script src="https://esf-fdd-dev.vela.hk/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="https://esf-fdd-dev.vela.hk/plugins/moment/moment.min.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="https://esf-fdd-dev.vela.hk/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+   <script src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/plugins/piexif.js" type="text/javascript"></script>
+    <script src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/plugins/sortable.js" type="text/javascript"></script>
+    <script src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/fileinput.js" type="text/javascript"></script>
+    
+    <script src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/js/locales/es.js" type="text/javascript"></script>
+    <script src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/themes/fas/theme.js" type="text/javascript"></script>
+    <script src="https://esf-fdd-dev.vela.hk/plugins/kartik-v-bootstrap-fileinput/themes/explorer-fas/theme.js" type="text/javascript"></script>
+    <script src="https://esf-fdd-dev.vela.hk/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    
+</head>
+
+<!-- for Work Order -->
+<link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/css/bootstrap-multiselect.css">
+<script type="text/javascript" src="https://esf-fdd-dev.vela.hk/js/bootstrap-multiselect.js"></script>
+
+<link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/css/bootstrap4-toggle.min.css">
+<script type="text/javascript" src="https://esf-fdd-dev.vela.hk/js/bootstrap4-toggle.min.js"></script>
+
+<link rel="stylesheet" href="https://esf-fdd-dev.vela.hk/css/workorder.css">
+<script type="text/javascript" src="https://esf-fdd-dev.vela.hk/js/custom.js"></script>
+<script type="text/javascript" src="https://esf-fdd-dev.vela.hk/js/rfq.js"></script>
+<script type="text/javascript" src="https://esf-fdd-dev.vela.hk/js/font-awesome-all.js"></script>
+
+<!-- AdminLTE App -->
+<script src="https://esf-fdd-dev.vela.hk/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="https://esf-fdd-dev.vela.hk/dist/js/demo.js"></script>
+<script src="https://esf-fdd-dev.vela.hk/plugins/summernote/summernote-bs4.min.js"></script>
+<script type="text/javascript" src="https://esf-fdd-dev.vela.hk/js/accounting.js"></script>
+
+<script>
+    
+      $('.datepicker*').datepicker({
+          format: 'yyyy-mm-dd',
+          language: "zh-TW"
+      });
+
+$('.select2*').select2();
+    
+    //Timepicker
+    $('#timepicker').datetimepicker({
+      format: 'HH:mm'
+    });
+       $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    });
+
+    $('#email_alert_btn').click( function(e) {
+    
+               $.ajax({
+            type:"GET",
+            url:'https://esf-fdd-dev.vela.hk/user/update_email_alert',
+            dataType: "html",
+            async: false,
+            data:{
+                is_email_alert: $("#email_alert_btn").prop('checked')
+                
+            }, success:function(data){
+               
+
+          
+            }
+        });
+    });
+
+
+</script>
+<script src="https://esf-fdd-dev.vela.hk/plugins/chart.js/Chart.min.js"></script>
+<script>
+  $(function () {
+                    
+      function roundDecimal(val, precision) {
+        return Math.round(Math.round(val * Math.pow(10, (precision || 0) + 1)) / 10) / Math.pow(10, (precision || 0));
+      }
+
+      function FormatNumber(n) {
+        n += "";
+        var arr = n.split(".");
+        var re = /(\d{1,3})(?=(\d{3})+$)/g;
+        return arr[0].replace(re, "$1,") + (arr.length == 2 ? "." + arr[1] : "");
+      }
+      
+            var areaChartData_9 = {
+                labels  : ["FM","H&S","Logistics","ESL","Resi","ESL-FM","ESL-FM2","Central-Central","ESL-Central"],
+                datasets: [
+                  {
+                    label               : "Settled",
+                    backgroundColor     : "rgba(60,141,188,0.9)",
+                    borderColor         : "rgba(60,141,188,0.8)",
+                    pointRadius          : false,
+                    pointColor          : "#3b8bba",
+                    pointStrokeColor    : "rgba(60,141,188,1)",
+                    pointHighlightFill  : "#fff",
+                    pointHighlightStroke: "rgba(60,141,188,1)",
+                    data                : [0,0.012345,0.000567,0.05,0,0,0,0,0]
+                  },
+                  {
+                    label               : "Committed",
+                    backgroundColor     : "rgba(210, 214, 222, 1)",
+                    borderColor         : "rgba(210, 214, 222, 1)",
+                    pointRadius         : false,
+                    pointColor          : "rgba(210, 214, 222, 1)",
+                    pointStrokeColor    : "#c1c7d1",
+                    pointHighlightFill  : "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data                : [0,0.0011354,0.000932,0.0024,0.0014,0,0,0,0]
+                  },
+                  {
+                    label               : "Budgeted",
+                    backgroundColor     : "rgba(100, 214, 222, 1)",
+                    borderColor         : "rgba(100, 214, 222, 1)",
+                    pointRadius         : false,
+                    pointColor          : "rgba(100, 214, 222, 1)",
+                    pointStrokeColor    : "#c1c7d1",
+                    pointHighlightFill  : "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data                : [0,5.5518,2.356424,1,-0.008,0.007,0,0,0]
+                  },
+                ]
+              }
+              var barChartData = jQuery.extend(true, {}, areaChartData_9)
+              var stackedBarChartCanvas_9 = $("#stackedBarChart_9").get(0).getContext("2d")
+              var stackedBarChartData_9 = jQuery.extend(true, {}, barChartData)
+          
+              var stackedBarChartOptions_9 = {
+                responsive              : true,
+                maintainAspectRatio     : false,
+                scales: {
+                  xAxes: [{
+                    stacked: true,
+                    barPercentage: 0.4
+                  }],
+                  yAxes: [{
+                    stacked: true,
+                    ticks: {
+                      beginAtZero: true,
+                      min: 0,
+                      
+                      stepSize: 10,
+                    }
+                  }]
+                },
+
+                tooltips: {
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || "";
+      
+                          if (label) {
+                              label += ": ";
+                          }
+                          label += "$" + FormatNumber(roundDecimal(tooltipItem.yLabel, 2)) + " Million ( $"+FormatNumber(roundDecimal(tooltipItem.yLabel*1000000, 2))+" )";
+                          
+                          return label;
+                      }
+                  }
+                }
+              }
+          
+              var stackedBarChart_9 = new Chart(stackedBarChartCanvas_9, {
+                type: "bar", 
+                data: stackedBarChartData_9,
+                options: stackedBarChartOptions_9
+              })
+                      })
+</script>
+<script>
+	$( document ).ready(function() {
+	//#feedbackNum
+	var feedback = $("#feedbackNum");
+	var feedbackMsg = $("#feedbackMsg");
+	if (feedback.text() >=1) {
+		var msgNum = document.createElement("strong");
+    msgNum.innerHTML = feedback.text();
+    document.getElementById('msgNum').appendChild(msgNum);
+    setTimeout(function(){
+		feedbackMsg.modal('show');
+    $(feedbackMsg).fadeIn(10);
+    $(feedbackMsg).fadeOut(6000);
+    $('.modal-backdrop').remove();
+  }, 500).modal('hide');
+
+	} else {
+		feedbackMsg.removeClass("alert");
+		feedbackMsg.removeClass("show");
+	};
+	//toast
+	// $('#myToast').on('hidden.bs.toast', function () {
+	// $('.toast').toast('show')
+	// })
+
+  // $( "#showToast" ).click(function() {
+  //   $('.toast').toast('show');
+  // });
+	//
+	$('.toast').toast('show');
+	$(".toast").fadeOut(600);
+	$('.toast').toast({
+    'autohide': false
+  });
+	//
+	});
+</script>
+</body>
+</html>
+

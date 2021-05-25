@@ -74,3 +74,66 @@
 ```
  style="background-color: #7d002f;border-color:  #7d002f;"
 ```
+###2021/05/24
+#####Add message alert
+>>welcome.blade.php
+>>/client/esf-fdd-dev/resources/views/dashboard
+	<!-- Feedback Forum -->
+	<div class="modal fade" tabindex="-1" role="alert" id="feedbackMsg">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Welcome Back 🎉</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body" style="color: #333;">
+					<div>
+						You have 
+						<span id="msgNum"></span>
+						unread message on <a style="color: #333;" href="https://esf-fdd-dev.vela.hk/message/chatbox">Feedback Forum</a>.
+					</div>
+				</div>
+				<div class="modal-footer">
+        <a href="https://esf-fdd-dev.vela.hk/message/chatbox" class="btn btn-primary" style="text-decoration: none;">Check out</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Feedback Forum -->
+<script>
+    //chris add
+    //#feedbackNum
+    var feedback = $("#feedbackNum");
+    var feedbackMsg = $("#feedbackMsg");
+    if (feedback.text() >=1) {
+      feedbackMsg.addClass("alert");
+      feedbackMsg.addClass("show");
+      feedbackMsg.modal('show');
+
+      var msgNum = document.createElement("strong");
+      msgNum.innerHTML = feedback.text();
+      document.getElementById('msgNum').appendChild(msgNum);
+    
+    } else {
+      feedbackMsg.removeClass("alert");
+      feedbackMsg.removeClass("show");
+    }
+</script>
+>>sidebar.blade.php
+>>/client/esf-fdd-dev/resources/views/layouts
+## add id
+``
+          <li class="nav-item">
+            <a href="{{ route('message::chatbox') }}" class="nav-link">
+              <i class="nav-icon fa fa-thumbs-up"></i>
+              <p>
+                Feedback Forum
+                <span id="feedbackNum" class="badge badge-warning right" style="">
+                {{ $unread_msg_count }}
+                </span>
+              </p>
+            </a>
+          </li>
+``
