@@ -117,6 +117,7 @@ use Auth;
     $(feedbackMsg).fadeIn(10);
     $(feedbackMsg).fadeOut(6000);
     $('.modal-backdrop').fadeOut(6000);
+    ('body').removeClass('modal-open');
   }, 500).modal('hide');
 	} else {
 		feedbackMsg.removeClass("alert");

@@ -1555,9 +1555,10 @@ $('.select2*').select2();
 		feedbackMsg.modal('show');
     $(feedbackMsg).fadeIn(10);
     $(feedbackMsg).fadeOut(6000);
-    $('.modal-backdrop').remove();
+    $('.modal-backdrop').fadeOut(5000);
+    $('body').removeClass('modal-open');
   }, 500).modal('hide');
-
+  //$('.modal-backdrop').remove();
 	} else {
 		feedbackMsg.removeClass("alert");
 		feedbackMsg.removeClass("show");
